@@ -21,7 +21,8 @@
         "is_vegan": "vfalse",
         "cuisine": "Asian",
         "cards_accepted": "cfalse",
-        "reservation_required": "rfalse"
+        "reservation_required": "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -43,7 +44,8 @@
         "is_vegan": "vfalse",
         "cuisine": "Italian",
         "cards_accepted": "ctrue",
-        "reservation_required": "rtrue"
+        "reservation_required": "rtrue",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -65,7 +67,8 @@
         "is_vegan": "vfalse",
         "cuisine": "Lebanese",
         "cards_accepted": "cfalse",
-        "reservation_required": "rfalse"
+        "reservation_required": "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -87,7 +90,9 @@
         "is_vegan": "vfalse",
         "cuisine": "Asian",
         "cards_accepted": "cfalse",
-        "reservation_required": "rfalse"
+        "reservation_required": "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
+          
       }
     },
     {
@@ -109,7 +114,8 @@
         "is_vegan": "vfalse",
         "cuisine": "Italian",
         "cards_accepted": "ctrue",
-        "reservation_required": "rfalse"
+        "reservation_required": "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -131,7 +137,8 @@
         "is_vegan": "vfalse",
         "cuisine": "Italian",
         "cards_accepted": "ctrue",
-        "reservation_required": "rfalse"
+        "reservation_required": "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -153,7 +160,8 @@
         "is_vegan": "vfalse",
         "cuisine": "Cafe",
         "cards_accepted": "cfalse",
-        "reservation_required": "rfalse"
+        "reservation_required": "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -175,7 +183,8 @@
         "is_vegan": "vfalse",
         "cuisine": "Asian",
         "cards_accepted": "ctrue",
-        "reservation_required": "rtrue"
+        "reservation_required": "rtrue",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -197,7 +206,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Italian",
         "cards_accepted" : "ctrue",
-        "reservation_required" : "rtrue"
+        "reservation_required" : "rtrue",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -219,7 +229,8 @@
       "is_vegan" : "vfalse",
       "cuisine" : "Italian",
       "cards_accepted" : "ctrue",
-      "reservation_required" : "rtrue"
+      "reservation_required" : "rtrue",
+        "avg_time_spent" : "1 to 2 hours"
     }
     },
     {
@@ -241,7 +252,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Cafe",
         "cards_accepted" : "ctrue",
-        "reservation_required" : "rtrue"
+        "reservation_required" : "rtrue",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -263,7 +275,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Italian",
         "cards_accepted" : "ctrue",
-        "reservation_required" : "rtrue"
+        "reservation_required" : "rtrue",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -285,7 +298,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Italian",
         "cards_accepted" : "ctrue",
-        "reservation_required" : "rfalse"
+        "reservation_required" : "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -307,7 +321,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Italian",
         "cards_accepted" : "ctrue",
-        "reservation_required" : "rfalse"
+        "reservation_required" : "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -329,7 +344,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Italian",
         "cards_accepted" : "ctrue",
-        "reservation_required" : "rfalse"
+        "reservation_required" : "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -351,7 +367,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Italian",
         "cards_accepted" : "ctrue",
-        "reservation_required" : "rfalse"
+        "reservation_required" : "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -373,7 +390,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Italian",
         "cards_accepted" :"ctrue",
-        "reservation_required" : "rfalse"
+        "reservation_required" : "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -395,7 +413,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Italian",
         "cards_accepted" : "cfalse",
-        "reservation_required" : "rfalse"
+        "reservation_required" : "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -417,7 +436,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Italian",
         "cards_accepted" : "cfalse",
-        "reservation_required" : "rfalse"
+        "reservation_required" : "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     },
     {
@@ -439,7 +459,8 @@
         "is_vegan" : "vfalse",
         "cuisine" : "Cafe",
         "cards_accepted" : "cfalse",
-        "reservation_required" : "rfalse"
+        "reservation_required" : "rfalse",
+        "avg_time_spent" : "1 to 2 hours"
       }
     }
   ],

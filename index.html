@@ -160,7 +160,7 @@
 
     var filterCountN = 0;
     
-    //$('#myModal').modal();
+    $('#myModal').modal();
 
     function initMap() {
 
@@ -694,8 +694,10 @@
             results.rating + 
             '"><strong style="font-size: 20px; margin-right: 13px">' + 
             results.name + '</strong><hr></div>' +
-            results.address + '<br><br>Average Cost: '+results.avgCost+ '<br><br>'
-       +'<img src="' + results.icon + '" style="max-width:250px"><br><br><button class="btn btn-danger" value="' +
+            results.address  +'<br><br><img src="' + results.icon + '" style="max-width:250px">'+
+            '<br><br>Average Cost: <b>'+results.avgCost+ '</b><br><br>'+
+               'People typically spend <b>'+results.filters.avg_time_spent+ '</b> here<br><br>'
+            +'<br><br><button class="btn btn-danger" value="' +
             location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
 
         infowindow = new google.maps.InfoWindow({
