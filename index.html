@@ -160,7 +160,7 @@
 
     var filterCountN = 0;
     
-    $('#myModal').modal();
+    //$('#myModal').modal();
 
     function initMap() {
 
@@ -679,12 +679,23 @@
         } else {
             results.rating = "images/fiveStar.png";
         }
+        
+        if (results.filters.average_cost=="less")
+            results.avgCost="$";
+        if (results.filters.average_cost=="medium")
+            results.avgCost="$$";
+        else 
+            results.avgCost="$$$";
 
         var location = new Array(results.geometry.location.lat, results.geometry.location.lng);
 
-        var contentString = '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' +
-            results.rating + '"><strong style="font-size: 20px; margin-right: 13px">' + results.name + '</strong><hr></div>' +
-            results.address + '<br><br><img src="' + results.icon + '" style="max-width:250px"><br><br><button class="btn btn-danger" value="' +
+        var contentString = 
+            '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' +
+            results.rating + 
+            '"><strong style="font-size: 20px; margin-right: 13px">' + 
+            results.name + '</strong><hr></div>' +
+            results.address + '<br><br>Average Cost: '+results.avgCost+ '<br><br>'
+       +'<img src="' + results.icon + '" style="max-width:250px"><br><br><button class="btn btn-danger" value="' +
             location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
 
         infowindow = new google.maps.InfoWindow({
@@ -756,7 +767,8 @@
             //origin: {lat: 50.7788432, lng: 6.0800873},
             origin: {lat: 50.774289,  lng: 6.085889},
             destination: des,
-            travelMode: google.maps.TravelMode[selectedMode]
+            travelMode: google.maps.TravelMode[selectedMode],
+            language: 'en'
 
         }, function (response, status) {
 
