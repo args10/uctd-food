@@ -128,10 +128,10 @@
 
 
     <div id="selectMode" style="display: none">
-        <button class="mybtn" id="walking" value="WALKING"><img src="images/walking.png"></button>
-        <button class="mybtn" id="bicycling" value="BICYCLING"><img src="images/bycicle.png"></button>
-        <button class="mybtn" id="transit" value="TRANSIT"><img src="images/bus.png"></button>
-        <button class="mybtn" id="driving" value="DRIVING"><img src="images/car.png"></button>
+        <button class="btn btn-default mybtn" id="walking" value="WALKING"><img src="images/walking.png"></button>
+        <button class="btn btn-default mybtn" id="bicycling" value="BICYCLING"><img src="images/bycicle.png"></button>
+        <button class="btn btn-default mybtn" id="transit" value="TRANSIT"><img src="images/bus.png"></button>
+        <button class="btn btn-default mybtn" id="driving" value="DRIVING"><img src="images/car.png"></button>
     </div>
     <div id="bottom-panel"></div>
 </div>
@@ -160,7 +160,7 @@
 
     var filterCountN = 0;
     
-    $('#myModal').modal();
+    //$('#myModal').modal();
 
     function initMap() {
 
@@ -684,7 +684,7 @@
 
         var contentString = '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' +
             results.rating + '"><strong style="font-size: 20px; margin-right: 13px">' + results.name + '</strong><hr></div>' +
-            results.address + '<br><br><img src="' + results.icon + '" style="max-width:250px"><br><br><button class="btn btn-default" value="' +
+            results.address + '<br><br><img src="' + results.icon + '" style="max-width:250px"><br><br><button class="btn btn-danger" value="' +
             location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
 
         infowindow = new google.maps.InfoWindow({
@@ -753,7 +753,8 @@
 
         directionsService.route({
 
-            origin: {lat: 50.7788432, lng: 6.0800873},
+            //origin: {lat: 50.7788432, lng: 6.0800873},
+            origin: {lat: 50.774289,  lng: 6.085889},
             destination: des,
             travelMode: google.maps.TravelMode[selectedMode]
 
@@ -771,10 +772,10 @@
         if (bottomPanel.childElementCount === 0) {
 
             var printBtn = document.createElement("button");
-            var printT = document.createTextNode("<span class='glyphicon glyphicon-star' aria-hidden='true'></span> Print");
+            var printT = document.createTextNode(" Print");
 
             printBtn.style.fontSize = '20px';
-            printBtn.className = 'btn btn-primary';
+            printBtn.className = 'btn btn-success';
 
             printBtn.appendChild(printT);
             printBtn.onclick = function () {
