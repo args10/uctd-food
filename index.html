@@ -22,13 +22,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Simply touch any of the icons for more details about the restaurant</h4>
+          <br><br>
+            <div class="alert alert-info" >
+              <h4 class="modal-title" id="myModalLabel">Simply touch any of the icons for more details about the restaurant</h4>
+            </div>
       </div>
-      <div class="modal-body">
-        Guten Apetit! 
-      </div>
+     
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Get started</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">Get started</button>
       </div>
     </div>
   </div>
@@ -160,7 +161,7 @@
 
     var filterCountN = 0;
     
-    //$('#myModal').modal();
+    $('#myModal').modal();
 
     function initMap() {
 
@@ -686,27 +687,42 @@
             results.avgCost="$$";
         else 
             results.avgCost="$$$";
+        
+        if (results.filters.is_vegan != "vfalse")
+            results.isVegan='<b>Vegan</b> <img style="max-height:30px;"  src="images/vagan.jpg"><br><br>';
+        else
+            results.isVegan='';
+        
+        if (results.filters.cards_accepted == "ctrue")
+            results.cardsAccepted='<b> Cards accepted</b>';
+        else
+            results.cardsAccepted='<b> Cash only</b>';
 
+        if (results.filters.reservation_required == "rtrue")
+            results.reservationRequired='<b>Reservation required</b>';
+        else
+            results.reservationRequired='<b>Reservation not required</b>';
+        
         var location = new Array(results.geometry.location.lat, results.geometry.location.lng);
 
         var contentString = 
-            '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' +
-            results.rating + 
-            '"><strong style="font-size: 20px; margin-right: 13px">' + 
-            results.name + '</strong><hr></div>' +
-            results.address  +'<br><br><img src="' + results.icon + '" style="max-width:250px">'+
-            '<br><br>Average Cost: <b>'+results.avgCost+ '</b><br><br>'+
-               'People typically spend <b>'+results.filters.avg_time_spent+ '</b> here<br><br>'
-            +'<br><br><button class="btn btn-danger" value="' +
-            location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
+            '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' + results.rating + 
+            '"><strong style="font-size: 20px; margin-right: 13px">' + results.name + 
+            '</strong><br><i>'+results.filters.cuisine+'</i><hr></div>' + 
+            results.address  +
+            '<br><br><img src="' + results.icon + '" style="max-width:250px">'+
+            '<br><br>Average Cost: <b>'+results.avgCost+ 
+            '</b>'+results.cardsAccepted+
+            '<br><br>'+ results.isVegan +
+            'People typically spend <b>'+results.filters.avg_time_spent+ 
+            '</b> here<br><br>'+ results.reservationRequired +
+            '<br><br><button class="btn btn-danger" value="' + location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
 
         infowindow = new google.maps.InfoWindow({
             position: results.geometry.location,
             content: contentString
         });
-
         infowindow.open(map);
-
     }
 
     function showdirection() {

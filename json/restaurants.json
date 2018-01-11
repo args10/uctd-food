@@ -295,7 +295,7 @@
       "rating": 3.3,
       "filters" : {
         "average_cost" : "medium",
-        "is_vegan" : "vfalse",
+        "is_vegan" : "vtrue",
         "cuisine" : "Italian",
         "cards_accepted" : "ctrue",
         "reservation_required" : "rfalse",
