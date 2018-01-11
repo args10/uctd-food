@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WhereForLunch</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+</head>
+
+<link rel="stylesheet" href="css/testCss.css"/>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+<script src="js/jquery-3.2.1.js"></script>
+
+<body>
+<div id="floating-panel"></div>
+<div id="right-panel">
+    <div id="filter" onchange="filter()">
+        <form class="form-horizontal">
+            <h3>Filters</h3>
+            <hr>
+            <div class="form-group">
+                <label for="cost" class="col-sm-4 control-label">Average Cost:</label>
+                <div class="col-sm-6">
+                    <div id="cost" class="checkbox" onclick="filterCount()">
+                        <label>
+                            <input class="cost" type="checkbox" value="less">$
+                        </label>
+                        <label>
+                            <input class="cost" type="checkbox" value="medium">$$
+                        </label>
+                        <label>
+                            <input class="cost" type="checkbox" value="high">$$$
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vegan" class="col-sm-4 control-label">Vegan</label>
+                <div class="col-sm-6">
+                    <div id="vegan" class="checkbox" onclick="filterCount()">
+                        <label>
+                            <input class="vegan" type="checkbox" value="vtrue"><img src="images/vagan.jpg">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cuisine" class="col-sm-4 control-label">Cuisine</label>
+                <div class="col-sm-6">
+                    <div id="cuisine" class="checkbox" onclick="filterCount()">
+                        <label>
+                            <input class="cuisine" type="checkbox" value="Asian"><img src="images/fried-rice.png">
+                            <input class="cuisine" type="checkbox" value="Italian"><img src="images/burger.png">
+                            <input class="cuisine" type="checkbox" value="Lebanese"><img src="images/kebab.png">
+                            <input class="cuisine" type="checkbox" value="Cafe"><img src="images/coffee.png">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="payments" class="col-sm-4 control-label">Payment</label>
+                <div class="col-sm-6">
+                    <div id="payments" class="checkbox" onclick="filterCount()">
+                        <label>
+                            <input class="payments" type="checkbox" value="ctrue"><img src="images/money.png">
+                            <input class="payments" type="checkbox" value="cfalse"><img src="images/credit-card.png">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="reservation" class="col-sm-4 control-label">Reservation</label>
+                <div class="col-sm-6">
+                    <div id="reservation" class="checkbox" onclick="filterCount()">
+                        <label>
+                            <input class="reservation" type="checkbox" value="rtrue">Required
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="available" class="col-sm-4 control-label">Opening</label>
+                <div class="col-sm-6">
+                    <div id="available" class="checkbox" onclick="filterCount()">
+                        <label>
+                            <input class="available" type="checkbox" value="true">Now
+                            <input class="available" type="checkbox" value="false">Later
+                            <input class="available" type="checkbox" value="false">Ealier
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="selectMode" style="display: none">
+        <button class="mybtn" id="walking" value="WALKING"><img src="images/walking.png"></button>
+        <button class="mybtn" id="bicycling" value="BICYCLING"><img src="images/bycicle.png"></button>
+        <button class="mybtn" id="transit" value="TRANSIT"><img src="images/bus.png"></button>
+        <button class="mybtn" id="driving" value="DRIVING"><img src="images/car.png"></button>
+    </div>
+    <div id="bottom-panel"></div>
+</div>
+<div id="map"></div>
+
+<script>
+
+    var map;
+    var infowindow;
+    var markerList = [];
+    var markerValueList = [];
+    var markerIndex;
+
+    var mypos;
+
+    var myposIcon;
+    var AsianIcon;
+    var ItalianIcon;
+    var CafeIcon;
+    var elseIcon;
+
+    var directionsDisplay;
+    var directionsService;
+
+    var selectedMode;
+
+    var filterCountN = 0;
+
+    function initMap() {
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            mapTypeControl: false,
+            center: {lat: 50.7788432, lng: 6.0800873},
+            zoom: 15,
+            styles: [
+                {
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#616161"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#f5f5f5"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape.man_made",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#e3e3e3"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape.man_made",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#e8eefd"
+                        },
+                        {
+                            "saturation": -35
+                        },
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "weight": 1.5
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape.natural",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#cedecf"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape.natural",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#42336c"
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#eeeeee"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.attraction",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.attraction",
+                    "elementType": "labels.text",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.business",
+                    "elementType": "labels.text",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.government",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.medical",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#e5e5e5"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#e3e5df"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.place_of_worship",
+                    "elementType": "labels.text",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.school",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.sports_complex",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#dadada"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#616161"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit.line",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#a7a6a7"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit.station",
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit.station",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#c9c9c9"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#adc8d9"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                    ]
+                }
+            ]
+        });
+
+        myposIcon = {
+            url: 'images/myposition.png'
+        };
+        AsianIcon = {
+            url: 'images/fried-rice.png'
+        };
+        ItalianIcon = {
+            url: 'images/burger.png'
+        };
+        CafeIcon = {
+            url: 'images/coffee.png'
+        };
+        elseIcon = {
+            url: 'images/kebab.png'
+        };
+
+
+        mypos = new google.maps.Marker({
+            map: map,
+            position: map.getCenter(),
+            icon: myposIcon,
+            animation: google.maps.Animation.DROP
+        });
+
+        mypos.addListener('click', toggleBounce);
+
+
+        $.getJSON("json/restaurants.json", function (data) {
+
+            $.each(data, function (i, field) {
+
+                for (var i = 0; i < field.length - 1; i++) {
+
+                    markerIndex = i;
+                    createMarker(field[i], markerIndex);
+                }
+            });
+        });
+
+        directionsDisplay = new google.maps.DirectionsRenderer;
+        directionsService = new google.maps.DirectionsService;
+
+    }
+
+    function filterCount() {
+
+        filterCountN = 5;
+
+        var select1 = $(".cost:checked").length;
+        var select2 = $(".payments:checked").length;
+        var select3 = $(".vegan:checked").length;
+        var select4 = $(".reservation:checked").length;
+        var select5 = $(".cuisine:checked").length;
+
+        var selectList = new Array(select1, select2, select3, select4, select5);
+
+        for (i = 0; i < 5; i++) {
+
+            if (selectList[i] === 0) {
+
+                filterCountN = filterCountN - 1;
+            }
+        }
+    }
+
+    function checkDisplay(selected, markerValue) {
+
+        var filterValue = new Array();
+
+        for (var n = 0; n < selected.length; n++) {
+
+            filterValue.push(selected[n].value);
+        }
+
+        keep = filterValue.indexOf(markerValue);
+
+        return keep;
+
+    }
+
+    function filter() {
+
+        var select1 = $(".cost:checked");
+        var select4 = $(".payments:checked");
+        var select2 = $(".vegan:checked");
+        var select5 = $(".reservation:checked");
+        var select3 = $(".cuisine:checked");
+
+
+        for (var x = 0; x < markerValueList.length; x++) {
+
+            var keepN = 0;
+
+            keep1 = checkDisplay(select1, markerValueList[x].average_cost);
+            keep2 = checkDisplay(select2, markerValueList[x].is_vegan);
+            keep3 = checkDisplay(select3, markerValueList[x].cuisine);
+            keep4 = checkDisplay(select4, markerValueList[x].cards_accepted);
+            keep5 = checkDisplay(select5, markerValueList[x].reservation_required);
+
+
+            var keepList = new Array(keep1, keep2, keep3, keep4, keep5);
+
+            for (i = 0; i < 5; i++) {
+                if (keepList[i] === -1) {
+                    keepN = keepN + 1;
+                }
+            }
+
+            if (keepN + filterCountN === 5) {
+
+                markerList[x].setMap(map);
+
+            } else {
+                markerList[x].setMap(null);
+
+            }
+        }
+    }
+
+    function toggleBounce() {
+        if (mypos.getAnimation() !== null) {
+            mypos.setAnimation(null);
+        } else {
+            mypos.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
+
+
+    function createMarker(place, mindex) {
+
+        var marker;
+
+        if (place.filters.cuisine === 'Asian') {
+
+            marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                icon: AsianIcon
+            });
+        } else if (place.filters.cuisine === 'Italian') {
+
+            marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                icon: ItalianIcon
+            });
+        } else if (place.filters.cuisine === 'Cafe') {
+
+            marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                icon: CafeIcon
+            });
+        } else {
+
+            marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                icon: elseIcon
+            });
+        }
+
+        markerList[mindex] = marker;
+        markerValueList[mindex] = place.filters;
+
+        google.maps.event.addListener(marker, 'click', function () {
+
+            createInfor(place);
+
+        });
+    }
+
+    function createInfor(results) {
+
+        if (results.rating <= 1) {
+            results.rating = "images/star.png";
+        } else if (results.rating > 1 && results.rating <= 1.5) {
+            results.rating = "images/oneH.png";
+        } else if (results.rating > 1.5 && results.rating <= 2) {
+            results.rating = "images/twoStar.png";
+        } else if (results.rating > 2 && results.rating <= 2.5) {
+            results.rating = "images/twoH.png";
+        } else if (results.rating > 2.5 && results.rating <= 3) {
+            results.rating = "images/three.png";
+        } else if (results.rating > 3 && results.rating <= 3.5) {
+            results.rating = "images/threeH.png";
+        } else if (results.rating > 3.5 && results.rating <= 4) {
+            results.rating = "images/fourStar.png";
+        } else if (results.rating > 4 && results.rating <= 4.5) {
+            results.rating = "images/fourH.png";
+        } else {
+            results.rating = "images/fiveStar.png";
+        }
+
+        var location = new Array(results.geometry.location.lat, results.geometry.location.lng);
+
+        var contentString = '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' +
+            results.rating + '"><strong style="font-size: 20px; margin-right: 13px">' + results.name + '</strong><hr></div>' +
+            results.address + '<br><br><img src="' + results.icon + '" style="max-width:250px"><br><br><button class="btn btn-default" value="' +
+            location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
+
+        infowindow = new google.maps.InfoWindow({
+            position: results.geometry.location,
+            content: contentString
+        });
+
+        infowindow.open(map);
+
+    }
+
+    function showdirection() {
+
+        selectedMode = "WALKING";
+
+        var filter = document.getElementById('filter');
+        var select = document.getElementById('selectMode');
+
+        filter.style.display = 'none';
+        select.style.display = 'block';
+
+        directionsDisplay.setMap(map);
+        directionsDisplay.setPanel(document.getElementById('right-panel'));
+
+        var destination = document.getElementById("navigation").value;
+
+
+        calculateAndDisplayRoute(directionsService, directionsDisplay, destination);
+
+        document.getElementById('walking').addEventListener('click', function () {
+            selectedMode = this.value;
+            calculateAndDisplayRoute(directionsService, directionsDisplay, destination);
+        });
+
+        document.getElementById('bicycling').addEventListener('click', function () {
+            selectedMode = this.value;
+            calculateAndDisplayRoute(directionsService, directionsDisplay, destination);
+        });
+
+        document.getElementById('driving').addEventListener('click', function () {
+            selectedMode = this.value;
+            calculateAndDisplayRoute(directionsService, directionsDisplay, destination);
+        });
+
+        document.getElementById('transit').addEventListener('click', function () {
+            selectedMode = this.value;
+            calculateAndDisplayRoute(directionsService, directionsDisplay, destination);
+        });
+
+    }
+
+    function calculateAndDisplayRoute(directionsService, directionsDisplay, destination) {
+
+        infowindow.close();
+
+        var latitude = parseFloat(destination.split(',')[0].substring(0));
+        var longitude = parseFloat(destination.split(',')[1].substring(0, 15));
+
+        var des = {
+            lat: latitude,
+            lng: longitude
+        };
+
+        directionsDisplay.setMap(map);
+
+
+        directionsService.route({
+
+            origin: {lat: 50.7788432, lng: 6.0800873},
+            destination: des,
+            travelMode: google.maps.TravelMode[selectedMode]
+
+        }, function (response, status) {
+
+            if (status == 'OK') {
+                directionsDisplay.setDirections(response);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
+
+        var bottomPanel = document.getElementById("bottom-panel");
+
+        if (bottomPanel.childElementCount === 0) {
+
+            var printBtn = document.createElement("button");
+            var printT = document.createTextNode("Print");
+
+            printBtn.style.fontSize = '20px';
+            printBtn.className = 'btn btn-primary';
+
+            printBtn.appendChild(printT);
+            printBtn.onclick = function () {
+
+
+                var thankInfo = document.createElement("div");
+                var thankInfoI = document.createElement("img");
+
+                thankInfoI.src = 'images/thankInfo.png';
+                thankInfo.id = 'thankInfo';
+                thankInfo.appendChild(thankInfoI);
+
+                var goBackBtn = document.createElement("button");
+                var goBackT = document.createTextNode("Go Back");
+
+                goBackBtn.className = 'btn btn-primary';
+                goBackBtn.style.marginTop = '-90px';
+
+
+                goBackBtn.appendChild(goBackT);
+                thankInfo.appendChild(goBackBtn);
+
+
+                var element = document.getElementById("floating-panel");
+                element.appendChild(thankInfo);
+
+            };
+
+            bottomPanel.appendChild(printBtn);
+
+        }
+    }
+
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlOeg_mcdRhM-bIGHd0LeLU9OybhW33K8&libraries=places&callback=initMap"
+        async defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
