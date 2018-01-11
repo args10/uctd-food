@@ -7,11 +7,35 @@
 </head>
 
 <link rel="stylesheet" href="styles/testCss.css"/>
-<link rel="stylesheet" href="styles/bootstrap.min.css"/>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
 
 <script src="js/jquery-3.2.1.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+    
+    
 
 <body>
+   
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Simply touch any of the icons for more details about the restaurant</h4>
+      </div>
+      <div class="modal-body">
+        Guten Apetit! 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Get started</button>
+      </div>
+    </div>
+  </div>
+</div>    
+<!-- END Modal -->    
+    
+    
 <div id="floating-panel"></div>
 <div id="right-panel">
     <div id="filter" onchange="filter()">
@@ -127,13 +151,18 @@
     var selectedMode;
 
     var filterCountN = 0;
+    
+    $('#myModal').modal();
 
     function initMap() {
 
         map = new google.maps.Map(document.getElementById('map'), {
             mapTypeControl: false,
-            center: {lat: 50.7788432, lng: 6.0800873},
-            zoom: 15,
+           // center: {lat: 50.7788432, lng: 6.0800873},        // Ponttor     
+            center: {lat: 50.774289,  lng: 6.085889},           // Elisenbrunen
+            zoom: 17,
+            minZoom: 16,
+            maxZoom: 20,
             styles: [
                 {
                     "elementType": "geometry",
@@ -449,7 +478,7 @@
         });
 
         myposIcon = {
-            url: 'images/myposition.png'
+            url: 'images/you-are-here-small.png'
         };
         AsianIcon = {
             url: 'images/fried-rice.png'
@@ -464,6 +493,7 @@
             url: 'images/kebab.png'
         };
 
+        map.fitB
 
         mypos = new google.maps.Marker({
             map: map,
@@ -733,7 +763,7 @@
         if (bottomPanel.childElementCount === 0) {
 
             var printBtn = document.createElement("button");
-            var printT = document.createTextNode("Print");
+            var printT = document.createTextNode("<span class='glyphicon glyphicon-star' aria-hidden='true'></span> Print");
 
             printBtn.style.fontSize = '20px';
             printBtn.className = 'btn btn-primary';
