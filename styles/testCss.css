@@ -39,12 +39,16 @@ html, body {
 }
 
 #right-panel {
+    float: right;
+    overflow-x: hidden;
+    
+    height: 100%;
     font-family: 'Roboto', 'sans-serif';
     line-height: 30px;
     //padding-left: 10px;
     border-left: 10px solid #fff;
     width: 400px !important;
-    border-left: 10px solid #ff9800 ;
+    border-left: 10px solid #f57c00;
 }
 
 #right-panel h3{
@@ -69,19 +73,23 @@ html, body {
     font-size: 12px;
 }
 
-#right-panel {
-    height: 100%;
-    float: right;
-    width: 350px;
-    overflow: auto;
-}
 .cost, .payments, .cuisine, .vegan, .reservation{
     font-size: 16px;
+}
+
+#cuisine img, #payment img {
+    margin: 0px 10px 60px 30px;
+}
+
+#available h5{
+    display: inline-block;
+    margin-right: 40px;
 }
 
 .form-group{
     font-size: 18px;
     font-weight: bold;
+    padding-left: 20px;
 }
 
 .control-label{
@@ -89,6 +97,10 @@ html, body {
 }
 
 /* checkbox*/
+
+[type="checkbox"]+label:before, [type="checkbox"]:not(.filled-in)+label:after {
+    display: none;
+}
 
  
 /* END checkbox*/

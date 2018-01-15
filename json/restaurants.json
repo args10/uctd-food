@@ -364,7 +364,7 @@
       "rating": 4,
       "filters" : {
         "average_cost" : "medium",
-        "is_vegan" : "vfalse",
+        "is_vegan" : "vtrue",
         "cuisine" : "American",
         "cards_accepted" : "ctrue",
         "reservation_required" : "rfalse",

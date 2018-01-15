@@ -76,95 +76,148 @@ MODAL TRIGGERS
 <div id="right-panel" >
     <div id="filter" onchange="filter()">
         <form class="form-horizontal">
-            <h3 class="orange">20 restaurants found near you</h3>
+            <h3 class="orange darken-2">20 restaurants found near you</h3>
             <div class="form-group">
-                <label for="cost" class="col-sm-6 control-label">Average Cost:</label>
-                <div class="col-sm-6">
-                    <div id="cost" class="checkbox" onclick="filterCount()">
-                        <input id = "ch1" class="cost" type="checkbox" value="less">
-                        <label for="ch1">$ Low</label>
-                        <br>
-                        <input id = "ch2" class="cost" type="checkbox" value="medium">
-                        <label for="ch2">$$ Medium</label>
-                        <br>
-                        <input id = "ch3" class="cost" type="checkbox" value="high">
-                        <label for="ch3"> $$$ High</label>
+                <div class="row">
+                    <label for="cost" class="col-sm-12 "><h5> Average Cost: </h5>
+                        <div class="progress">
+                            <div class="determinate orange" style="width:40%"></div>
+                        </div>
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="cost" class="checkbox" onclick="filterCount()">
+                            <input id = "ch1" class="cost" type="checkbox" value="less">
+                            <label for="ch1">
+                                <a class="waves-effect waves-light btn orange white-text">&#8364;</a>
+                            </label>
+
+                            <input id = "ch2" class="cost" type="checkbox" value="medium">
+                            <label for="ch2">
+                                <a class="waves-effect waves-light btn orange white-text">&#8364;&#8364;</a>
+                            </label>
+
+                            <input id = "ch3" class="cost" type="checkbox" value="high">
+                            <label for="ch3"> 
+                                <a class="waves-effect waves-light btn orange white-text">&#8364;&#8364;&#8364;</a>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <label for="vegan" class="col-sm-6 control-label">Vegan</label>
-                <div class="col-sm-6">
-                    <div id="vegan" class="checkbox" onclick="filterCount()">
-                        <input class="vegan" type="checkbox" value="vtrue">
-                        <label>
-                            <img src="images/icons/vegan.jpg" height="64px" width="64px"> Vegan
+                <div class="row">
+                        <label for="vegan" class="col-sm-12"><h5>Vegan</h5>
+                         <div class="progress">
+                            <div class="determinate orange" style="width:40%"></div>
+                         </div>
                         </label>
+                       
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="vegan" class="checkbox" onclick="filterCount()">
+                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue">
+                            <label for="vegan1">
+                                <img src="images/icons/vegan.jpg" height="64px" width="64px">  
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <label for="cuisine" class="col-sm-6 control-label">Cuisine</label>
-                <div class="col-sm-6">
+                <div class="row">
+                    <label for="cuisine" class="col-sm-12 "><h5>Cuisine</h5>
+                    <div class="progress">
+                        <div class="determinate orange" style="width:40%"></div>
+                     </div>
+
+                    </label>
+                </div>
+                <div class="row">
+                <div class="col-sm-12">
                     <div id="cuisine" class="checkbox" onclick="filterCount()">
                         
-        <input id = "cuisine1" class="cuisine" type="checkbox" value="Asian"><img src="images/icons/noodles.png">
-        <label for="cuisine1">Asian</label>
-                        
-        <input id = "cuisine2" class="cuisine" type="checkbox" value="Italian"><img src="images/icons/pizza.png">
-        <label for="cuisine2">Italian</label>
-                        
-        <input id = "cuisine3" class="cuisine" type="checkbox" value="Lebanese"><img src="images/icons/kebab.png">
-        <label for="cuisine3">Lebanese</label>
-                        
-        <input id = "cuisine4" class="cuisine" type="checkbox" value="Cafe"><img src="images/icons/coffee.png">
-        <label for="cuisine4">Cafe</label>
-                        
-        <input id = "cuisine5" class="cuisine" type="checkbox" value="Spanish"><img src="images/icons/chicken.png">
-        <label for="cuisine5">Spanish</label>
-                        
-        <input id = "cuisine6" class="cuisine" type="checkbox" value="American"><img src="images/icons/french-fries.png">
-        <label for="cuisine6">American</label>
-                        
-        <input id = "cuisine7" class="cuisine" type="checkbox" value="German"><img src="images/icons/hamburger.png">
-        <label for="cuisine7">German</label>
-                        
-        <input id = "cuisine8" class="cuisine" type="checkbox" value="French"><img src="images/icons/muffin.png">
-        <label for="cuisine8">French</label>
+                    <input id = "cuisine1" class="cuisine" type="checkbox" value="Asian">
+                    <label for="cuisine1"><img src="images/icons/noodles.png"> </label>
+
+                    <input id = "cuisine2" class="cuisine" type="checkbox" value="Italian">
+                    <label for="cuisine2"><img src="images/icons/pizza.png"> </label>
+
+                    <input id = "cuisine3" class="cuisine" type="checkbox" value="Lebanese">
+                    <label for="cuisine3"><img src="images/icons/kebab.png"> </label>
+
+                    <input id = "cuisine4" class="cuisine" type="checkbox" value="Cafe"> 
+                    <label for="cuisine4"><img src="images/icons/coffee.png"></label>
+
+                    <input id = "cuisine5" class="cuisine" type="checkbox" value="Spanish"> 
+                    <label for="cuisine5"><img src="images/icons/chicken.png"></label>
+
+                    <input id = "cuisine6" class="cuisine" type="checkbox" value="American"> 
+                    <label for="cuisine6"><img src="images/icons/french-fries.png"></label>
+
+                    <input id = "cuisine7" class="cuisine" type="checkbox" value="German">
+                    <label for="cuisine7"><img src="images/icons/hamburger.png"> </label>
+
+                    <input id = "cuisine8" class="cuisine" type="checkbox" value="French"> 
+                    <label for="cuisine8"><img src="images/icons/muffin.png"></label>
                         
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="payments" class="col-sm-6 control-label">Cards accepted</label>
-                <div class="col-sm-6">
-                    <div id="payments" class="checkbox" onclick="filterCount()">
-                        <label>
-                            <input class="payments" type="checkbox" value="ctrue"><img src="images/icons/card 1.png"><br>
-                            <input class="payments" type="checkbox" value="cfalse"><img src="images/icons/card 2.png">
-                        </label>
+            </div>
+            <div class="form-group" id="payment">
+                <div class="row" >
+                    <label for="payments" class="col-sm-12"><h5>Cards accepted</h5>
+                        <div class="progress">
+                            <div class="determinate orange" style="width:40%"></div>
+                        </div>
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="payments" class="checkbox" onclick="filterCount()">
+                            <label>
+                                <input class="payments" type="checkbox" value="ctrue"><img src="images/icons/card 1.png"> 
+                                <input class="payments" type="checkbox" value="cfalse"><img src="images/icons/card 2.png">
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <label for="reservation" class="col-sm-6 control-label">Reservation</label>
-                <div class="col-sm-6">
+                <label for="reservation" class="col-sm-12"><h5>Reservation</h5>
+                <div class="progress">
+                    <div class="determinate orange" style="width:40%"></div>
+                </div>
+                </label>
+                <div class="col-sm-12">
                     <div id="reservation" class="checkbox" onclick="filterCount()">
                         <label>
-                            <input class="reservation" type="checkbox" value="rtrue">Required
+                            <input class="reservation" type="checkbox" value="rtrue">
+                            <h5>Required</h5>
                         </label>
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <label for="available" class="col-sm-6 control-label">Opening</label>
-                <div class="col-sm-6">
-                    <div id="available" class="checkbox" onclick="filterCount()">
-                        <label>
-                            <input class="available" type="checkbox" value="true">Now<br>
-                            <input class="available" type="checkbox" value="false">Later<br>
-                            <input class="available" type="checkbox" value="false">Ealier<br>
-                        </label>
+                <div class="row">
+                    <label for="available" class="col-sm-12"><h5>Opening</h5>
+                        <div class="progress">
+                            <div class="determinate orange" style="width:40%"></div>
+                        </div>                    
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="available" class="checkbox" onclick="filterCount()">
+                            <label>
+                                <input class="available" type="checkbox" value="true"><h5>Now </h5>
+                                <input class="available" type="checkbox" value="false"><h5>Later </h5>
+                                <input class="available" type="checkbox" value="false"><h5>Ealier </h5>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
