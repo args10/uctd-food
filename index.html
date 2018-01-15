@@ -83,13 +83,13 @@ MODAL TRIGGERS
                 <div class="col-sm-6">
                     <div id="cost" class="checkbox" onclick="filterCount()">
                         <input id = "ch1" class="cost" type="checkbox" value="less">
-                        <label for="ch1">$</label>
+                        <label for="ch1">$ Low</label>
                         <br>
                         <input id = "ch2" class="cost" type="checkbox" value="medium">
-                        <label for="ch2">$$</label>
+                        <label for="ch2">$$ Medium</label>
                         <br>
                         <input id = "ch3" class="cost" type="checkbox" value="high">
-                        <label for="ch3"> $$$ </label>
+                        <label for="ch3"> $$$ High</label>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@ MODAL TRIGGERS
                     <div id="vegan" class="checkbox" onclick="filterCount()">
                         <input class="vegan" type="checkbox" value="vtrue">
                         <label>
-                            <img src="images/vagan.jpg" height="35px" width="35px">
+                            <img src="images/icons/vegan.jpg" height="64px" width="64px"> Vegan
                         </label>
                     </div>
                 </div>
@@ -108,12 +108,31 @@ MODAL TRIGGERS
                 <label for="cuisine" class="col-sm-6 control-label">Cuisine</label>
                 <div class="col-sm-6">
                     <div id="cuisine" class="checkbox" onclick="filterCount()">
-                        <label>
-                            <input class="cuisine" type="checkbox" value="Asian"><img src="images/fried-rice.png"><br>
-                            <input class="cuisine" type="checkbox" value="Italian"><img src="images/burger.png"><br>
-                            <input class="cuisine" type="checkbox" value="Lebanese"><img src="images/kebab.png"><br>
-                            <input class="cuisine" type="checkbox" value="Cafe"><img src="images/coffee.png">
-                        </label>
+                        
+        <input id = "cuisine1" class="cuisine" type="checkbox" value="Asian"><img src="images/icons/noodles.png">
+        <label for="cuisine1">Asian</label>
+                        
+        <input id = "cuisine2" class="cuisine" type="checkbox" value="Italian"><img src="images/icons/pizza.png">
+        <label for="cuisine2">Italian</label>
+                        
+        <input id = "cuisine3" class="cuisine" type="checkbox" value="Lebanese"><img src="images/icons/kebab.png">
+        <label for="cuisine3">Lebanese</label>
+                        
+        <input id = "cuisine4" class="cuisine" type="checkbox" value="Cafe"><img src="images/icons/coffee.png">
+        <label for="cuisine4">Cafe</label>
+                        
+        <input id = "cuisine5" class="cuisine" type="checkbox" value="Spanish"><img src="images/icons/chicken.png">
+        <label for="cuisine5">Spanish</label>
+                        
+        <input id = "cuisine6" class="cuisine" type="checkbox" value="American"><img src="images/icons/french-fries.png">
+        <label for="cuisine6">American</label>
+                        
+        <input id = "cuisine7" class="cuisine" type="checkbox" value="German"><img src="images/icons/hamburger.png">
+        <label for="cuisine7">German</label>
+                        
+        <input id = "cuisine8" class="cuisine" type="checkbox" value="French"><img src="images/icons/muffin.png">
+        <label for="cuisine8">French</label>
+                        
                     </div>
                 </div>
             </div>
@@ -122,8 +141,8 @@ MODAL TRIGGERS
                 <div class="col-sm-6">
                     <div id="payments" class="checkbox" onclick="filterCount()">
                         <label>
-                            <input class="payments" type="checkbox" value="ctrue"><img src="images/money.png"><br>
-                            <input class="payments" type="checkbox" value="cfalse"><img src="images/credit-card.png">
+                            <input class="payments" type="checkbox" value="ctrue"><img src="images/icons/card 1.png"><br>
+                            <input class="payments" type="checkbox" value="cfalse"><img src="images/icons/card 2.png">
                         </label>
                     </div>
                 </div>
@@ -566,7 +585,7 @@ MODAL TRIGGERS
 
             $.each(data, function (i, field) {
 
-                for (var i = 0; i < field.length - 2; i++) {
+                for (var i = 0; i < field.length; i++) {
 
                     markerIndex = i;
                     createMarker(field[i], markerIndex);
@@ -776,11 +795,11 @@ MODAL TRIGGERS
         }
         
         if (results.filters.average_cost=="less")
-            results.avgCost="$";
+            results.avgCost="$ low";
         if (results.filters.average_cost=="medium")
-            results.avgCost="$$";
+            results.avgCost="$$ medium";
         else 
-            results.avgCost="$$$";
+            results.avgCost="$$$ high";
         
         if (results.filters.is_vegan != "vfalse")
             results.isVegan='<b>Vegan</b> <img style="max-height:30px;"  src="images/vagan.jpg"><br><br>';
@@ -788,9 +807,9 @@ MODAL TRIGGERS
             results.isVegan='';
         
         if (results.filters.cards_accepted == "ctrue")
-            results.cardsAccepted='<b> Cards accepted</b>';
+            results.cardsAccepted='<b>, Cards accepted</b>';
         else
-            results.cardsAccepted='<b> Cash only</b>';
+            results.cardsAccepted='<b>, Cash only</b>';
 
         if (results.filters.reservation_required == "rtrue")
             results.reservationRequired='<b>Reservation required</b>';

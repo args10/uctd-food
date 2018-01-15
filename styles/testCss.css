@@ -41,9 +41,10 @@ html, body {
 #right-panel {
     font-family: 'Roboto', 'sans-serif';
     line-height: 30px;
-    padding-left: 10px;
+    //padding-left: 10px;
     border-left: 10px solid #fff;
     width: 400px !important;
+    border-left: 10px solid orange;
 }
 
 #right-panel select, #right-panel input {
