@@ -44,7 +44,14 @@ html, body {
     //padding-left: 10px;
     border-left: 10px solid #fff;
     width: 400px !important;
-    border-left: 10px solid orange;
+    border-left: 10px solid #ff9800 ;
+}
+
+#right-panel h3{
+    color: white;
+    font-size: 40px;
+    margin: 0;
+    padding: 10px;
 }
 
 #right-panel select, #right-panel input {
