@@ -24,7 +24,7 @@
 </head>
 <body>
    
-<!-- Modal -->
+<!-- Modal 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -44,27 +44,52 @@
 </div>    
 <!-- END Modal -->    
     
+    <!--
+     
+MODAL TRIGGERS  
+        <a href="#modal1" class="btn waves-effect">Modal 1</a>
+        <a href="#modal2" class="btn waves-effect red">Modal 2</a>
+
+        <!-- MODAL STRUCTURE  
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
+          </div>
+        </div>
+
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <h4>Modal 2 Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
+          </div>
+        </div>
+        -->
     
 <div id="floating-panel"></div>
-<div id="right-panel">
+<div id="right-panel" >
     <div id="filter" onchange="filter()">
         <form class="form-horizontal">
-            <h3>19 restaurants found near you</h3>
+            <h3 class="orange">19 restaurants found near you</h3>
             <hr>
             <div class="form-group">
                 <label for="cost" class="col-sm-6 control-label">Average Cost:</label>
                 <div class="col-sm-6">
                     <div id="cost" class="checkbox" onclick="filterCount()">
-                        <label>
-                            <input class="cost" type="checkbox" value="less">$
-                        </label><br>
-                        <label>
-                            <input class="cost" type="checkbox" value="medium">$$ 
-                        </label><br>
-                        <label>
-                            <input class="cost" type="checkbox" value="high">$$$ 
-                        </label>
-
+                        <input id = "ch1" class="cost" type="checkbox" value="less">
+                        <label for="ch1">$</label>
+                        <br>
+                        <input id = "ch2" class="cost" type="checkbox" value="medium">
+                        <label for="ch2">$$</label>
+                        <br>
+                        <input id = "ch3" class="cost" type="checkbox" value="high">
+                        <label for="ch3"> $$$ </label>
                     </div>
                 </div>
             </div>
@@ -72,8 +97,9 @@
                 <label for="vegan" class="col-sm-6 control-label">Vegan</label>
                 <div class="col-sm-6">
                     <div id="vegan" class="checkbox" onclick="filterCount()">
+                        <input class="vegan" type="checkbox" value="vtrue">
                         <label>
-                            <input class="vegan" type="checkbox" value="vtrue"><img src="images/vagan.jpg" height="35px" width="35px">
+                            <img src="images/vagan.jpg" height="35px" width="35px">
                         </label>
                     </div>
                 </div>
@@ -157,9 +183,8 @@
     var mypos;
 
     var myposIcon;
-    var AsianIcon;
-    var ItalianIcon;
-    var CafeIcon;
+    
+    var AsianIcon, ItalianIcon, LebaneseIcon, CafeIcon, SpanishIcon, AmericanIcon, GermanIcon, SwissIcon;
     var elseIcon;
 
     var directionsDisplay;
@@ -169,7 +194,7 @@
 
     var filterCountN = 0;
     
-    $('#myModal').modal();
+    //$('#myModal').modal();
 
     function initMap() {
 
@@ -177,8 +202,8 @@
             mapTypeControl: false,
            // center: {lat: 50.7788432, lng: 6.0800873},        // Ponttor     
             center: {lat: 50.774289,  lng: 6.085889},           // Elisenbrunen
-            zoom: 17,
-            minZoom: 16,
+            zoom: 16,
+            minZoom: 15,
             maxZoom: 20,
             styles: [
                 {
@@ -498,16 +523,31 @@
             url: 'images/you-are-here-small.png'
         };
         AsianIcon = {
-            url: 'images/fried-rice.png'
+            url: 'images/icons/noodles.png'
         };
         ItalianIcon = {
-            url: 'images/burger.png'
+            url: 'images/icons/pizza.png'
+        };
+        LebaneseIcon = {
+            url: 'images/icons/kebab.png'
         };
         CafeIcon = {
-            url: 'images/coffee.png'
+            url: 'images/icons/coffee.png'
         };
+        SpanishIcon = {
+            url: 'images/icons/chicken.png'
+        };
+        AmericanIcon = {
+            url: 'images/icons/french-fries.png'
+        };
+        GermanIcon = {
+            url: 'images/icons/hamburger.png'
+        };
+        FrenchIcon = {
+            url: 'images/icons/muffin.png'
+        };        
         elseIcon = {
-            url: 'images/kebab.png'
+            url: 'images/icons/kebab.png'
         };
 
         map.fitB
@@ -634,29 +674,75 @@
                 position: place.geometry.location,
                 icon: AsianIcon
             });
-        } else if (place.filters.cuisine === 'Italian') {
+        } 
+        else if (place.filters.cuisine === 'Italian') {
 
             marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
                 icon: ItalianIcon
             });
-        } else if (place.filters.cuisine === 'Cafe') {
+        }
+        else if (place.filters.cuisine === 'Lebanese') {
+
+            marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                icon: LebaneseIcon
+            });            
+        }
+        else if (place.filters.cuisine === 'Cafe') {
 
             marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
                 icon: CafeIcon
             });
-        } else {
+        } 
+        
+         if (place.filters.cuisine === 'Spanish') {
+
+            marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                icon: SpanishIcon
+            });
+        } 
+        else if (place.filters.cuisine === 'American') {
+
+            marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                icon: AmericanIcon
+            });
+        }
+        else if (place.filters.cuisine === 'German') {
+
+            marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                icon: GermanIcon
+            });            
+        }
+        else if (place.filters.cuisine === 'French') {
+
+            marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location,
+                icon: FrenchIcon
+            });
+        } 
+        
+        /*else {
 
             marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
                 icon: elseIcon
             });
-        }
-
+        }*/
+        
+        
         markerList[mindex] = marker;
         markerValueList[mindex] = place.filters;
 
@@ -855,6 +941,13 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlOeg_mcdRhM-bIGHd0LeLU9OybhW33K8&libraries=places&callback=initMap"
         async defer></script>
+    
+<script>
+    $(document).ready(function(){
+      // Init Modal
+      //$('.modal').modal();
+    });
+</script>    
 </body>
 </html>
 
