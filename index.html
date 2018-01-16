@@ -7,24 +7,24 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="styles/testCss.css"/>
 
-     <!--Import Google Icon Font-->
+    <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
+
     <!--Import jQuery-->
     <script src="js/jquery-3.2.1.js"></script>
-    
+
     <!--Import bootstrap js-->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    
+
 </head>
 <body>
-   
-<!-- Modal 
+
+<!-- Modal
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -35,45 +35,58 @@
               <h4 class="modal-title" id="myModalLabel">Simply touch any of the icons for more details about the restaurant</h4>
             </div>
       </div>
-     
+
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal">Get started</button>
       </div>
     </div>
   </div>
-</div>    
-<!-- END Modal -->    
-    
-    <!--
-     
-MODAL TRIGGERS  
-        <a href="#modal1" class="btn waves-effect">Modal 1</a>
-        <a href="#modal2" class="btn waves-effect red">Modal 2</a>
+</div>
+<!-- END Modal -->
 
-        <!-- MODAL STRUCTURE  
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-          </div>
-          <div class="modal-footer">
-            <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
-          </div>
-        </div>
+<!--
 
-        <div id="modal2" class="modal">
-          <div class="modal-content">
-            <h4>Modal 2 Header</h4>
-            <p>A bunch of text</p>
-          </div>
-          <div class="modal-footer">
-            <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
-          </div>
-        </div>
-        -->
-    
+MODAL TRIGGERS
+    <a href="#modal1" class="btn waves-effect">Modal 1</a>
+    <a href="#modal2" class="btn waves-effect red">Modal 2</a>
+
+    <!-- MODAL STRUCTURE
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h4>Modal 2 Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
+      </div>
+    </div>
+    -->
+
 <div id="floating-panel"></div>
-<div id="right-panel" >
+<div id="infoWindow">
+    <img id="resImage" src=""><hr>
+    <div id="resInfo">
+        <h6 id="resName" style="display: inline-block; font-size: 18px"></h6><img id="resRating" style="max-height: 20px; margin-left: 10px; margin-bottom: 5px">
+        <p id="resAddress" style="margin-top: 6px"></p>
+        <strong>Average Cost: </strong><p id="resAvgCost" style="display: inline-block"></p><br>
+        <strong>Payments: </strong><p id="resCard" style="display: inline-block"></p><br>
+        <strong>People typically spend: </strong><p id="resSpendTime" style="display: inline-block"></p><br>
+        <strong>Menu: </strong><p id="resMenu" style="display: inline-block"></p><br>
+        <button class="btn btn-danger" id="navigation" onclick="showdirection()" style="width: 100%">ShowNavigation</button>
+    </div>
+</div>
+
+<div id="right-panel">
     <div id="filter" onchange="filter()">
         <form class="form-horizontal">
             <h3 class="orange darken-2">20 restaurants found near you</h3>
@@ -88,18 +101,18 @@ MODAL TRIGGERS
                 <div class="row">
                     <div class="col-sm-12">
                         <div id="cost" class="checkbox" onclick="filterCount()">
-                            <input id = "ch1" class="cost" type="checkbox" value="less">
+                            <input id="ch1" class="cost" type="checkbox" value="less">
                             <label for="ch1">
                                 <a class="waves-effect waves-light btn orange white-text">&#8364;</a>
                             </label>
 
-                            <input id = "ch2" class="cost" type="checkbox" value="medium">
+                            <input id="ch2" class="cost" type="checkbox" value="medium">
                             <label for="ch2">
                                 <a class="waves-effect waves-light btn orange white-text">&#8364;&#8364;</a>
                             </label>
 
-                            <input id = "ch3" class="cost" type="checkbox" value="high">
-                            <label for="ch3"> 
+                            <input id="ch3" class="cost" type="checkbox" value="high">
+                            <label for="ch3">
                                 <a class="waves-effect waves-light btn orange white-text">&#8364;&#8364;&#8364;</a>
                             </label>
                         </div>
@@ -108,19 +121,19 @@ MODAL TRIGGERS
             </div>
             <div class="form-group">
                 <div class="row">
-                        <label for="vegan" class="col-sm-12"><h5>Vegan</h5>
-                         <div class="progress">
+                    <label for="vegan" class="col-sm-12"><h5>Vegan</h5>
+                        <div class="progress">
                             <div class="determinate orange" style="width:40%"></div>
-                         </div>
-                        </label>
-                       
+                        </div>
+                    </label>
+
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <div id="vegan" class="checkbox" onclick="filterCount()">
                             <input id="vegan1" class="vegan" type="checkbox" value="vtrue">
                             <label for="vegan1">
-                                <img src="images/icons/vegan.jpg" height="64px" width="64px">  
+                                <img src="images/icons/vegan.jpg" height="64px" width="64px">
                             </label>
                         </div>
                     </div>
@@ -129,46 +142,46 @@ MODAL TRIGGERS
             <div class="form-group">
                 <div class="row">
                     <label for="cuisine" class="col-sm-12 "><h5>Cuisine</h5>
-                    <div class="progress">
-                        <div class="determinate orange" style="width:40%"></div>
-                     </div>
+                        <div class="progress">
+                            <div class="determinate orange" style="width:40%"></div>
+                        </div>
 
                     </label>
                 </div>
                 <div class="row">
-                <div class="col-sm-12">
-                    <div id="cuisine" class="checkbox" onclick="filterCount()">
-                        
-                    <input id = "cuisine1" class="cuisine" type="checkbox" value="Asian">
-                    <label for="cuisine1"><img src="images/icons/noodles.png"> </label>
+                    <div class="col-sm-12">
+                        <div id="cuisine" class="checkbox" onclick="filterCount()">
 
-                    <input id = "cuisine2" class="cuisine" type="checkbox" value="Italian">
-                    <label for="cuisine2"><img src="images/icons/pizza.png"> </label>
+                            <input id="cuisine1" class="cuisine" type="checkbox" value="Asian">
+                            <label for="cuisine1"><img src="images/icons/noodles.png"> </label>
 
-                    <input id = "cuisine3" class="cuisine" type="checkbox" value="Lebanese">
-                    <label for="cuisine3"><img src="images/icons/kebab.png"> </label>
+                            <input id="cuisine2" class="cuisine" type="checkbox" value="Italian">
+                            <label for="cuisine2"><img src="images/icons/pizza.png"> </label>
 
-                    <input id = "cuisine4" class="cuisine" type="checkbox" value="Cafe"> 
-                    <label for="cuisine4"><img src="images/icons/coffee.png"></label>
+                            <input id="cuisine3" class="cuisine" type="checkbox" value="Lebanese">
+                            <label for="cuisine3"><img src="images/icons/kebab.png"> </label>
 
-                    <input id = "cuisine5" class="cuisine" type="checkbox" value="Spanish"> 
-                    <label for="cuisine5"><img src="images/icons/chicken.png"></label>
+                            <input id="cuisine4" class="cuisine" type="checkbox" value="Cafe">
+                            <label for="cuisine4"><img src="images/icons/coffee.png"></label>
 
-                    <input id = "cuisine6" class="cuisine" type="checkbox" value="American"> 
-                    <label for="cuisine6"><img src="images/icons/french-fries.png"></label>
+                            <input id="cuisine5" class="cuisine" type="checkbox" value="Spanish">
+                            <label for="cuisine5"><img src="images/icons/chicken.png"></label>
 
-                    <input id = "cuisine7" class="cuisine" type="checkbox" value="German">
-                    <label for="cuisine7"><img src="images/icons/hamburger.png"> </label>
+                            <input id="cuisine6" class="cuisine" type="checkbox" value="American">
+                            <label for="cuisine6"><img src="images/icons/french-fries.png"></label>
 
-                    <input id = "cuisine8" class="cuisine" type="checkbox" value="French"> 
-                    <label for="cuisine8"><img src="images/icons/muffin.png"></label>
-                        
+                            <input id="cuisine7" class="cuisine" type="checkbox" value="German">
+                            <label for="cuisine7"><img src="images/icons/hamburger.png"> </label>
+
+                            <input id="cuisine8" class="cuisine" type="checkbox" value="French">
+                            <label for="cuisine8"><img src="images/icons/muffin.png"></label>
+
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
             <div class="form-group" id="payment">
-                <div class="row" >
+                <div class="row">
                     <label for="payments" class="col-sm-12"><h5>Cards accepted</h5>
                         <div class="progress">
                             <div class="determinate orange" style="width:40%"></div>
@@ -179,8 +192,10 @@ MODAL TRIGGERS
                     <div class="col-sm-12">
                         <div id="payments" class="checkbox" onclick="filterCount()">
                             <label>
-                                <input class="payments" type="checkbox" value="ctrue"><img src="images/icons/card 1.png"> 
-                                <input class="payments" type="checkbox" value="cfalse"><img src="images/icons/card 2.png">
+                                <input class="payments" type="checkbox" value="ctrue"><img
+                                    src="images/icons/card 1.png">
+                                <input class="payments" type="checkbox" value="cfalse"><img
+                                    src="images/icons/card 2.png">
                             </label>
                         </div>
                     </div>
@@ -188,9 +203,9 @@ MODAL TRIGGERS
             </div>
             <div class="form-group">
                 <label for="reservation" class="col-sm-12"><h5>Reservation</h5>
-                <div class="progress">
-                    <div class="determinate orange" style="width:40%"></div>
-                </div>
+                    <div class="progress">
+                        <div class="determinate orange" style="width:40%"></div>
+                    </div>
                 </label>
                 <div class="col-sm-12">
                     <div id="reservation" class="checkbox" onclick="filterCount()">
@@ -206,7 +221,7 @@ MODAL TRIGGERS
                     <label for="available" class="col-sm-12"><h5>Opening</h5>
                         <div class="progress">
                             <div class="determinate orange" style="width:40%"></div>
-                        </div>                    
+                        </div>
                     </label>
                 </div>
                 <div class="row">
@@ -223,11 +238,11 @@ MODAL TRIGGERS
             </div>
         </form>
 
-        
-<!--        <div class="alert alert-success" role="alert">
-          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-          Select the above options for chosing a restaurant
-        </div>-->
+
+        <!--        <div class="alert alert-success" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  Select the above options for chosing a restaurant
+                </div>-->
 
 
     </div>
@@ -254,7 +269,7 @@ MODAL TRIGGERS
     var mypos;
 
     var myposIcon;
-    
+
     var AsianIcon, ItalianIcon, LebaneseIcon, CafeIcon, SpanishIcon, AmericanIcon, GermanIcon, SwissIcon;
     var elseIcon;
 
@@ -264,15 +279,15 @@ MODAL TRIGGERS
     var selectedMode;
 
     var filterCountN = 0;
-    
+
     //$('#myModal').modal();
 
     function initMap() {
 
         map = new google.maps.Map(document.getElementById('map'), {
             mapTypeControl: false,
-           // center: {lat: 50.7788432, lng: 6.0800873},        // Ponttor     
-            center: {lat: 50.774289,  lng: 6.085889},           // Elisenbrunen
+            // center: {lat: 50.7788432, lng: 6.0800873},        // Ponttor
+            center: {lat: 50.774289, lng: 6.085889},           // Elisenbrunen
             zoom: 16,
             minZoom: 15,
             maxZoom: 20,
@@ -616,7 +631,7 @@ MODAL TRIGGERS
         };
         FrenchIcon = {
             url: 'images/icons/muffin.png'
-        };        
+        };
         elseIcon = {
             url: 'images/icons/kebab.png'
         };
@@ -660,7 +675,7 @@ MODAL TRIGGERS
         var select4 = $(".reservation:checked").length;
         var select5 = $(".cuisine:checked").length;
 
-        var selectList = new Array(select1, select2, select3, select4, select5);
+        var selectList = [select1, select2, select3, select4, select5];
 
         for (i = 0; i < 5; i++) {
 
@@ -706,7 +721,7 @@ MODAL TRIGGERS
             keep5 = checkDisplay(select5, markerValueList[x].reservation_required);
 
 
-            var keepList = new Array(keep1, keep2, keep3, keep4, keep5);
+            var keepList = [keep1, keep2, keep3, keep4, keep5];
 
             for (i = 0; i < 5; i++) {
                 if (keepList[i] === -1) {
@@ -745,7 +760,7 @@ MODAL TRIGGERS
                 position: place.geometry.location,
                 icon: AsianIcon
             });
-        } 
+        }
         else if (place.filters.cuisine === 'Italian') {
 
             marker = new google.maps.Marker({
@@ -760,7 +775,7 @@ MODAL TRIGGERS
                 map: map,
                 position: place.geometry.location,
                 icon: LebaneseIcon
-            });            
+            });
         }
         else if (place.filters.cuisine === 'Cafe') {
 
@@ -769,16 +784,16 @@ MODAL TRIGGERS
                 position: place.geometry.location,
                 icon: CafeIcon
             });
-        } 
-        
-         if (place.filters.cuisine === 'Spanish') {
+        }
+
+        if (place.filters.cuisine === 'Spanish') {
 
             marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
                 icon: SpanishIcon
             });
-        } 
+        }
         else if (place.filters.cuisine === 'American') {
 
             marker = new google.maps.Marker({
@@ -793,7 +808,7 @@ MODAL TRIGGERS
                 map: map,
                 position: place.geometry.location,
                 icon: GermanIcon
-            });            
+            });
         }
         else if (place.filters.cuisine === 'French') {
 
@@ -802,18 +817,18 @@ MODAL TRIGGERS
                 position: place.geometry.location,
                 icon: FrenchIcon
             });
-        } 
-        
+        }
+
         /*else {
 
-            marker = new google.maps.Marker({
-                map: map,
-                position: place.geometry.location,
-                icon: elseIcon
-            });
-        }*/
-        
-        
+         marker = new google.maps.Marker({
+         map: map,
+         position: place.geometry.location,
+         icon: elseIcon
+         });
+         }*/
+
+
         markerList[mindex] = marker;
         markerValueList[mindex] = place.filters;
 
@@ -845,48 +860,66 @@ MODAL TRIGGERS
         } else {
             results.rating = "images/fiveStar.png";
         }
-        
-        if (results.filters.average_cost=="less")
-            results.avgCost="$ low";
-        if (results.filters.average_cost=="medium")
-            results.avgCost="$$ medium";
-        else 
-            results.avgCost="$$$ high";
-        
-        if (results.filters.is_vegan != "vfalse")
-            results.isVegan='<b>Vegan</b> <img style="max-height:30px;"  src="images/vagan.jpg"><br><br>';
-        else
-            results.isVegan='';
-        
-        if (results.filters.cards_accepted == "ctrue")
-            results.cardsAccepted='<b>, Cards accepted</b>';
-        else
-            results.cardsAccepted='<b>, Cash only</b>';
 
-        if (results.filters.reservation_required == "rtrue")
-            results.reservationRequired='<b>Reservation required</b>';
+        if (results.filters.average_cost === "less")
+            results.avgCost = "$ low";
+        if (results.filters.average_cost === "medium")
+            results.avgCost = "$$ medium";
         else
-            results.reservationRequired='<b>Reservation not required</b>';
-        
-        var location = new Array(results.geometry.location.lat, results.geometry.location.lng);
+            results.avgCost = "$$$ high";
 
-        var contentString = 
-            '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' + results.rating + 
-            '"><strong style="font-size: 20px; margin-right: 13px">' + results.name + 
-            '</strong><br><i>'+results.filters.cuisine+'</i><hr></div>' + 
-            results.address  +
-            '<br><br><img src="' + results.icon + '" style="max-width:250px">'+
-            '<br><br>Average Cost: <b>'+results.avgCost+ 
-            '</b>'+results.cardsAccepted+
-            '<br><br>'+ results.isVegan +
-            'People typically spend <b>'+results.filters.avg_time_spent+ 
-            '</b> here<br><br>'+ results.reservationRequired +
-            '<br><br><button class="btn btn-danger" value="' + location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
+        if (results.filters.is_vegan !== "vfalse")
+            results.isVegan = '<b>Vegan</b> <img style="max-height:30px;"  src="images/vagan.jpg"><br><br>';
+        else
+            results.isVegan = '';
+
+        if (results.filters.cards_accepted === "ctrue")
+            results.cardsAccepted = 'Cards accepted';
+        else
+            results.cardsAccepted = 'Cash only';
+
+        if (results.filters.reservation_required === "rtrue")
+            results.reservationRequired = '<b>Reservation required</b>';
+        else
+            results.reservationRequired = '<b>Reservation not required</b>';
+
+        var location = [results.geometry.location.lat, results.geometry.location.lng];
+
+        /*    var contentString =
+         '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' + results.rating +
+         '"><strong style="font-size: 20px; margin-right: 13px">' + results.name +
+         '</strong><br><i>' + results.filters.cuisine + '</i><hr></div>' +
+         results.address +
+         '<br><br><img src="' + results.icon + '" style="max-width:250px">' +
+         '<br><br>Average Cost: <b>' + results.avgCost +
+         '</b>' + results.cardsAccepted +
+         '<br><br>' + results.isVegan +
+         'People typically spend <b>' + results.filters.avg_time_spent +
+         '</b> here<br><br>' + results.reservationRequired +
+         '<br><br><button class="btn btn-danger" value="' + location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
+         */
+
+
+        document.getElementById('resImage').src = results.icon;
+        document.getElementById('resName').innerText = results.name;
+        document.getElementById('resRating').src = results.rating;
+        document.getElementById('resAddress').innerText = results.address;
+        document.getElementById('resAvgCost').innerText = results.avgCost;
+        document.getElementById('resCard').innerText = results.cardsAccepted;
+        document.getElementById('resSpendTime').innerText = results.filters.avg_time_spent;
+
+        document.getElementById('navigation').value = location;
+
+
+        var contentString = document.getElementById('infoWindow');
+        contentString.style.display = 'block';
+
 
         infowindow = new google.maps.InfoWindow({
             position: results.geometry.location,
             content: contentString
         });
+
         infowindow.open(map);
     }
 
@@ -948,14 +981,14 @@ MODAL TRIGGERS
         directionsService.route({
 
             //origin: {lat: 50.7788432, lng: 6.0800873},
-            origin: {lat: 50.774289,  lng: 6.085889},
+            origin: {lat: 50.774289, lng: 6.085889},
             destination: des,
             travelMode: google.maps.TravelMode[selectedMode],
             language: 'en'
 
         }, function (response, status) {
 
-            if (status == 'OK') {
+            if (status === 'OK') {
                 directionsDisplay.setDirections(response);
             } else {
                 window.alert('Directions request failed due to ' + status);
@@ -1006,21 +1039,29 @@ MODAL TRIGGERS
 
 
 </script>
-    
-<!--Import jQuery before materialize.js-->       
+
+<!--Import jQuery before materialize.js-->
 <script src="materialize/js/materialize.min.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlOeg_mcdRhM-bIGHd0LeLU9OybhW33K8&libraries=places&callback=initMap"
         async defer></script>
-    
+
 <script>
-    $(document).ready(function(){
-      // Init Modal
-      //$('.modal').modal();
+    $(document).ready(function () {
+        // Init Modal
+        //$('.modal').modal();
     });
-</script>    
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 
