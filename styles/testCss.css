@@ -60,6 +60,10 @@ html, body {
     text-align: center;
 }
 
+#right-panel h5{
+    font-size: 1.2rem;
+}
+
 #right-panel select, #right-panel input {
     font-size: 20px;
     margin-top: 10px;
@@ -78,7 +82,7 @@ html, body {
 }
 
 #cuisine img, #payment img {
-    margin: 0px 10px 60px 30px;
+    margin: 0px 10px 55px 0px;
 }
 
 #available h5{
@@ -96,15 +100,14 @@ html, body {
     font-weight: normal;
 }
 
-#infoWindow{
-    display: none;
-    max-width: 320px;
-}
-
 /* checkbox*/
 
 [type="checkbox"]+label:before, [type="checkbox"]:not(.filled-in)+label:after {
     display: none;
+}
+
+.checkbox label{
+    height: 45px;
 }
 
  
@@ -115,11 +118,13 @@ html, body {
 
 #infoWindow{
     overflow-x: hidden;
+    display: none;
+    max-width: 320px;
 }
 
 .card-content {
     padding: 0 !important;
 }
  
- 
+
 /* END InfoWindow*/

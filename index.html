@@ -109,15 +109,16 @@ MODAL TRIGGERS
         <form class="form-horizontal">
             <h3 class="orange darken-2">20 restaurants found near you</h3>
             <div class="form-group">
-                <div class="row">
+<!--                 <div class="row">
                     <label for="cost" class="col-sm-12 "><h5> Average Cost: </h5>
                         <div class="progress">
-                            <div class="determinate orange" style="width:40%"></div>
+                            <div class="determinate orange" style="width:100%"></div>
                         </div>
                     </label>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-sm-12">
+                        <h5> Average Cost: </h5>
                         <div id="cost" class="checkbox" onclick="filterCount()">
                             <input id="ch1" class="cost" type="checkbox" value="less">
                             <label for="ch1">
@@ -138,16 +139,19 @@ MODAL TRIGGERS
                 </div>
             </div>
             <div class="form-group">
-                <div class="row">
+<!--                 <div class="row">
                     <label for="vegan" class="col-sm-12"><h5>Vegan</h5>
                         <div class="progress">
                             <div class="determinate orange" style="width:40%"></div>
                         </div>
                     </label>
-
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-sm-12">
+                        <div class="progress">
+                            <div class="determinate orange" style="width:100%"></div>
+                        </div>
+                        <h5>Vegan</h5>
                         <div id="vegan" class="checkbox" onclick="filterCount()">
                             <input id="vegan1" class="vegan" type="checkbox" value="vtrue">
                             <label for="vegan1">
@@ -158,16 +162,19 @@ MODAL TRIGGERS
                 </div>
             </div>
             <div class="form-group">
-                <div class="row">
+<!--                 <div class="row">
                     <label for="cuisine" class="col-sm-12 "><h5>Cuisine</h5>
                         <div class="progress">
                             <div class="determinate orange" style="width:40%"></div>
                         </div>
-
                     </label>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-sm-12">
+                        <div class="progress">
+                            <div class="determinate orange" style="width:100%"></div>
+                        </div>
+                        <h5>Cuisine</h5>
                         <div id="cuisine" class="checkbox" onclick="filterCount()">
 
                             <input id="cuisine1" class="cuisine" type="checkbox" value="Asian">
@@ -199,15 +206,19 @@ MODAL TRIGGERS
                 </div>
             </div>
             <div class="form-group" id="payment">
-                <div class="row">
+                <!-- <div class="row">
                     <label for="payments" class="col-sm-12"><h5>Cards accepted</h5>
                         <div class="progress">
                             <div class="determinate orange" style="width:40%"></div>
                         </div>
                     </label>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-sm-12">
+                        <div class="progress">
+                            <div class="determinate orange" style="width:100%"></div>
+                        </div>
+                        <h5>Payment</h5>
                         <div id="payments" class="checkbox" onclick="filterCount()">
                             <label>
                                 <input class="payments" type="checkbox" value="ctrue"><img
@@ -220,12 +231,16 @@ MODAL TRIGGERS
                 </div>
             </div>
             <div class="form-group">
-                <label for="reservation" class="col-sm-12"><h5>Reservation</h5>
+<!--                 <label for="reservation" class="col-sm-12"><h5>Reservation</h5>
                     <div class="progress">
                         <div class="determinate orange" style="width:40%"></div>
                     </div>
-                </label>
+                </label> -->
                 <div class="col-sm-12">
+                    <div class="progress">
+                        <div class="determinate orange" style="width:100%"></div>
+                    </div>
+                    <h5>Reservation</h5>
                     <div id="reservation" class="checkbox" onclick="filterCount()">
                         <label>
                             <input class="reservation" type="checkbox" value="rtrue">
@@ -234,7 +249,7 @@ MODAL TRIGGERS
                     </div>
                 </div>
             </div>
-            <div class="form-group">
+<!--             <div class="form-group">
                 <div class="row">
                     <label for="available" class="col-sm-12"><h5>Opening</h5>
                         <div class="progress">
@@ -253,7 +268,7 @@ MODAL TRIGGERS
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </form>
 
 
@@ -758,7 +773,7 @@ MODAL TRIGGERS
         }
         
         map.setCenter({lat: 50.774289, lng: 6.085889});
-        map.setZoom(15);
+        map.setZoom(16);
     }
 
     function toggleBounce() {
