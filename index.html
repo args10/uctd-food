@@ -72,7 +72,7 @@ MODAL TRIGGERS
     -->
 
 <div id="floating-panel"></div>
-<div id="infoWindow">
+<!--<div id="infoWindow">
         <div class="card">
           <div class="card-image">
             <img  id="resImage"  src="">
@@ -90,7 +90,7 @@ MODAL TRIGGERS
                 <button  class="btn waves-effect waves-light orange white-text pulse" id="navigation" onclick="showdirection()" style="width: 100%">Show Directions</button>
             </div>
           </div>
-        </div>
+        </div> -->
 
 <!--     <img id="resImage" src=""><hr>
     <div id="resInfo">
@@ -101,8 +101,8 @@ MODAL TRIGGERS
         <strong>People typically spend: </strong><p id="resSpendTime" style="display: inline-block"></p><br>
         <strong>Menu: </strong><p id="resMenu" style="display: inline-block"></p><br>
         <button class="btn btn-danger pulse" id="navigation" onclick="showdirection()" style="width: 100%">ShowNavigation</button>
-    </div> -->
-</div>
+    </div> 
+</div>-->
 
 <div id="right-panel">
     <div id="filter" onchange="filter()">
@@ -221,10 +221,12 @@ MODAL TRIGGERS
                         <h5>Payment</h5>
                         <div id="payments" class="checkbox" onclick="filterCount()">
                             <label>
-                                <input class="payments" type="checkbox" value="ctrue"><img
-                                    src="images/icons/card 1.png">
                                 <input class="payments" type="checkbox" value="cfalse"><img
-                                    src="images/icons/card 2.png">
+                                    src="images/icons/cash.png">
+                                <input class="payments" type="checkbox" value="ctrue"><img
+                                    src="images/icons/visaCard.png">
+                                <input class="payments" type="checkbox" value="ctrue"><img
+                                    src="images/icons/masterCard.png">
                             </label>
                         </div>
                     </div>
@@ -654,10 +656,10 @@ MODAL TRIGGERS
             url: 'images/icons/coffee.png'
         };
         SpanishIcon = {
-            url: 'images/icons/chicken.png'
+            url: 'images/icons/seefood.png'
         };
         AmericanIcon = {
-            url: 'images/icons/french-fries.png'
+            url: 'images/icons/chicken.png'
         };
         GermanIcon = {
             url: 'images/icons/hamburger.png'
@@ -921,7 +923,7 @@ MODAL TRIGGERS
 
         var location = [results.geometry.location.lat, results.geometry.location.lng];
 
-        /*    var contentString =
+            var contentString =
          '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' + results.rating +
          '"><strong style="font-size: 20px; margin-right: 13px">' + results.name +
          '</strong><br><i>' + results.filters.cuisine + '</i><hr></div>' +
@@ -933,9 +935,9 @@ MODAL TRIGGERS
          'People typically spend <b>' + results.filters.avg_time_spent +
          '</b> here<br><br>' + results.reservationRequired +
          '<br><br><button class="btn btn-danger" value="' + location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
-         */
+         
 
-
+/*
         document.getElementById('resImage').src = results.icon;
         document.getElementById('resName').innerText = results.name;
         document.getElementById('resRating').src = results.rating;
@@ -950,7 +952,7 @@ MODAL TRIGGERS
 
         var contentString = document.getElementById('infoWindow');
         contentString.style.display = 'block';
-
+*/
 
         infowindow = new google.maps.InfoWindow({
             position: results.geometry.location,
