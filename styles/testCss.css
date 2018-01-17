@@ -82,12 +82,17 @@ html, body {
 }
 
 #cuisine img{
-    margin: 0px 10px 55px 0px;
+    margin: 0px 0px 80px 0px;
+    max-width: 75px;
+}
+#cuisine img:hover, #cost a:hover, #payments img:hover, #vegan img:hover, #reservation img:hover {
+    opacity: 0.5;
+
 }
 
 #payment img {
     margin: 0px 10px 40px 0px;
-    max-width: 80px;
+    max-width: 75px;
 }
 
 #available h5{
