@@ -73,16 +73,35 @@ MODAL TRIGGERS
 
 <div id="floating-panel"></div>
 <div id="infoWindow">
-    <img id="resImage" src=""><hr>
+        <div class="card">
+          <div class="card-image">
+            <img  id="resImage"  src="">
+            <span class="card-title"  id="resName" >Card Title</span>
+          </div>
+          <div class="card-content">
+          <img id="resRating" style="max-height: 18px;  margin: 5px">
+            <div id="resInfo">
+                <p id="resAddress" style="margin-top: 6px"></p>
+                <h6>Average Cost: <strong><p id="resAvgCost" style="display: inline-block"></p></strong></h6>
+                <h6>Payments: <strong><p id="resCard" style="display: inline-block"></p></strong></h6>
+                <h6>People typically spend: <strong><p id="resSpendTime" style="display: inline-block"></p></strong></h6>
+                <h6>Must Try: <strong><p id="mustTry" style="display: inline-block"></p></strong></h6>
+                <br>
+                <button  class="btn waves-effect waves-light orange white-text pulse" id="navigation" onclick="showdirection()" style="width: 100%">Show Directions</button>
+            </div>
+          </div>
+        </div>
+
+<!--     <img id="resImage" src=""><hr>
     <div id="resInfo">
-        <h6 id="resName" style="display: inline-block; font-size: 18px"></h6><img id="resRating" style="max-height: 20px; margin-left: 10px; margin-bottom: 5px">
+        <h6 id="resName" style="display: inline-block; font-size: 18px"></h6>
         <p id="resAddress" style="margin-top: 6px"></p>
         <strong>Average Cost: </strong><p id="resAvgCost" style="display: inline-block"></p><br>
         <strong>Payments: </strong><p id="resCard" style="display: inline-block"></p><br>
         <strong>People typically spend: </strong><p id="resSpendTime" style="display: inline-block"></p><br>
         <strong>Menu: </strong><p id="resMenu" style="display: inline-block"></p><br>
-        <button class="btn btn-danger" id="navigation" onclick="showdirection()" style="width: 100%">ShowNavigation</button>
-    </div>
+        <button class="btn btn-danger pulse" id="navigation" onclick="showdirection()" style="width: 100%">ShowNavigation</button>
+    </div> -->
 </div>
 
 <div id="right-panel">
@@ -909,6 +928,7 @@ MODAL TRIGGERS
         document.getElementById('resAvgCost').innerText = results.avgCost;
         document.getElementById('resCard').innerText = results.cardsAccepted;
         document.getElementById('resSpendTime').innerText = results.filters.avg_time_spent;
+        document.getElementById('mustTry').innerText = results.filters.must_try;
 
         document.getElementById('navigation').value = location;
 

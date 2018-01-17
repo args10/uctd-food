@@ -109,3 +109,17 @@ html, body {
 
  
 /* END checkbox*/
+
+
+/* InfoWindow*/
+
+#infoWindow{
+    overflow-x: hidden;
+}
+
+.card-content {
+    padding: 0 !important;
+}
+ 
+ 
+/* END InfoWindow*/

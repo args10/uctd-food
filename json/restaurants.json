@@ -22,7 +22,8 @@
         "cuisine": "Asian",
         "cards_accepted": "cfalse",
         "reservation_required": "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -45,7 +46,8 @@
         "cuisine": "Italian",
         "cards_accepted": "ctrue",
         "reservation_required": "rtrue",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -68,7 +70,8 @@
         "cuisine": "Lebanese",
         "cards_accepted": "cfalse",
         "reservation_required": "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -91,7 +94,8 @@
         "cuisine": "Asian",
         "cards_accepted": "cfalse",
         "reservation_required": "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
           
       }
     },
@@ -115,7 +119,8 @@
         "cuisine": "Italian",
         "cards_accepted": "ctrue",
         "reservation_required": "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -138,7 +143,8 @@
         "cuisine": "French",
         "cards_accepted": "ctrue",
         "reservation_required": "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -161,7 +167,8 @@
         "cuisine": "Cafe",
         "cards_accepted": "cfalse",
         "reservation_required": "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -184,7 +191,8 @@
         "cuisine": "Spanish",
         "cards_accepted": "ctrue",
         "reservation_required": "rtrue",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -207,7 +215,8 @@
         "cuisine" : "French",
         "cards_accepted" : "ctrue",
         "reservation_required" : "rtrue",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -230,7 +239,8 @@
       "cuisine" : "Asian",
       "cards_accepted" : "ctrue",
       "reservation_required" : "rtrue",
-        "avg_time_spent" : "1 to 2 hours"
+      "avg_time_spent" : "1 to 2 hours",
+      "must_try" : "Pizza, Pasta"
     }
     },
     {
@@ -253,7 +263,8 @@
         "cuisine" : "Cafe",
         "cards_accepted" : "ctrue",
         "reservation_required" : "rtrue",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -276,7 +287,8 @@
         "cuisine" : "German",
         "cards_accepted" : "ctrue",
         "reservation_required" : "rtrue",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -299,7 +311,8 @@
         "cuisine" : "Italian",
         "cards_accepted" : "ctrue",
         "reservation_required" : "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -322,7 +335,8 @@
         "cuisine" : "Lebanese",
         "cards_accepted" : "ctrue",
         "reservation_required" : "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -345,7 +359,8 @@
         "cuisine" : "Italian",
         "cards_accepted" : "ctrue",
         "reservation_required" : "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -368,7 +383,8 @@
         "cuisine" : "American",
         "cards_accepted" : "ctrue",
         "reservation_required" : "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -391,7 +407,8 @@
         "cuisine" : "Italian",
         "cards_accepted" :"ctrue",
         "reservation_required" : "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -414,7 +431,8 @@
         "cuisine" : "French",
         "cards_accepted" : "cfalse",
         "reservation_required" : "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -437,7 +455,8 @@
         "cuisine" : "Italian",
         "cards_accepted" : "cfalse",
         "reservation_required" : "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     },
     {
@@ -460,7 +479,8 @@
         "cuisine" : "Cafe",
         "cards_accepted" : "cfalse",
         "reservation_required" : "rfalse",
-        "avg_time_spent" : "1 to 2 hours"
+        "avg_time_spent" : "1 to 2 hours",
+        "must_try" : "Pizza, Pasta"
       }
     }
   ],
