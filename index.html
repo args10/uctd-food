@@ -97,17 +97,17 @@ MODAL TRIGGERS
     </div>-->
 
 
-    <!--     <img id="resImage" src=""><hr>
-        <div id="resInfo">
-            <h6 id="resName" style="display: inline-block; font-size: 18px"></h6>
-            <p id="resAddress" style="margin-top: 6px"></p>
-            <strong>Average Cost: </strong><p id="resAvgCost" style="display: inline-block"></p><br>
-            <strong>Payments: </strong><p id="resCard" style="display: inline-block"></p><br>
-            <strong>People typically spend: </strong><p id="resSpendTime" style="display: inline-block"></p><br>
-            <strong>Menu: </strong><p id="resMenu" style="display: inline-block"></p><br>
-            <button class="btn btn-danger pulse" id="navigation" onclick="showdirection()" style="width: 100%">ShowNavigation</button>
-        </div>
-    </div>-->
+<!--     <img id="resImage" src=""><hr>
+    <div id="resInfo">
+        <h6 id="resName" style="display: inline-block; font-size: 18px"></h6>
+        <p id="resAddress" style="margin-top: 6px"></p>
+        <strong>Average Cost: </strong><p id="resAvgCost" style="display: inline-block"></p><br>
+        <strong>Payments: </strong><p id="resCard" style="display: inline-block"></p><br>
+        <strong>People typically spend: </strong><p id="resSpendTime" style="display: inline-block"></p><br>
+        <strong>Menu: </strong><p id="resMenu" style="display: inline-block"></p><br>
+        <button class="btn btn-danger pulse" id="navigation" onclick="showdirection()" style="width: 100%">ShowNavigation</button>
+    </div>
+</div>-->
 </div>
 <div id="right-panel">
     <div id="filter" onchange="filter()">
@@ -158,10 +158,8 @@ MODAL TRIGGERS
                         </div>
                         <h5>Vegan</h5>
                         <div id="vegan" class="checkbox" onclick="filterCount()">
-                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue">
-                            <label for="vegan1">
-                                <img src="images/icons/vegan.jpg" height="64px" width="64px">
-                            </label>
+                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
+                            <label for="vegan1"><img id="v1" src="images/icons/vegan.jpg" height="64px" width="64px"></label>
                         </div>
                     </div>
                 </div>
@@ -182,29 +180,29 @@ MODAL TRIGGERS
                         <h5>Cuisine</h5>
                         <div id="cuisine" class="checkbox" onclick="filterCount()">
 
-                            <input id="cuisine1" class="cuisine" type="checkbox" value="Asian">
-                            <label for="cuisine1"><img src="images/icons/noodles.png"> </label>
+                            <input id="cuisine1" class="cuisine" type="checkbox" value="Asian" onclick="check1()">
+                            <label for="cuisine1"><img id="c1" src="images/icons/fnoodles.png"></label>
 
-                            <input id="cuisine2" class="cuisine" type="checkbox" value="Italian">
-                            <label for="cuisine2"><img src="images/icons/pizza.png"> </label>
+                            <input id="cuisine2" class="cuisine" type="checkbox" value="Italian" onclick="check2()">
+                            <label for="cuisine2"><img id="c2" src="images/icons/fpizza.png"> </label>
 
-                            <input id="cuisine3" class="cuisine" type="checkbox" value="Lebanese">
-                            <label for="cuisine3"><img src="images/icons/kebab.png"> </label>
+                            <input id="cuisine3" class="cuisine" type="checkbox" value="Lebanese" onclick="check3()">
+                            <label for="cuisine3"><img id="c3" src="images/icons/fkebab.png"> </label>
 
-                            <input id="cuisine4" class="cuisine" type="checkbox" value="Cafe">
-                            <label for="cuisine4"><img src="images/icons/coffee.png"></label>
+                            <input id="cuisine4" class="cuisine" type="checkbox" value="Cafe" onclick="check4()">
+                            <label for="cuisine4"><img id="c4" src="images/icons/fCoffee.png"></label>
 
-                            <input id="cuisine5" class="cuisine" type="checkbox" value="Spanish">
-                            <label for="cuisine5"><img src="images/icons/chicken.png"></label>
+                            <input id="cuisine5" class="cuisine" type="checkbox" value="Spanish" onclick="check5()">
+                            <label for="cuisine5"><img id="c5" src="images/icons/fseefood.png"></label>
 
-                            <input id="cuisine6" class="cuisine" type="checkbox" value="American">
-                            <label for="cuisine6"><img src="images/icons/french-fries.png"></label>
+                            <input id="cuisine6" class="cuisine" type="checkbox" value="American" onclick="check6()">
+                            <label for="cuisine6"><img id="c6" src="images/icons/fchicken.png"></label>
 
-                            <input id="cuisine7" class="cuisine" type="checkbox" value="German">
-                            <label for="cuisine7"><img src="images/icons/hamburger.png"> </label>
+                            <input id="cuisine7" class="cuisine" type="checkbox" value="German" onclick="check7()">
+                            <label for="cuisine7"><img id="c7" src="images/icons/fhamburger.png"> </label>
 
-                            <input id="cuisine8" class="cuisine" type="checkbox" value="French">
-                            <label for="cuisine8"><img src="images/icons/muffin.png"></label>
+                            <input id="cuisine8" class="cuisine" type="checkbox" value="French" onclick="check8()">
+                            <label for="cuisine8"><img id="c8" src="images/icons/fmuffin.png"></label>
 
                         </div>
                     </div>
@@ -225,14 +223,12 @@ MODAL TRIGGERS
                         </div>
                         <h5>Payment</h5>
                         <div id="payments" class="checkbox" onclick="filterCount()">
-                            <label>
-                                <input class="payments" type="checkbox" value="cfalse"><img
-                                    src="images/icons/cash.png">
-                                <input class="payments" type="checkbox" value="ctrue"><img
-                                    src="images/icons/visaCard.png">
-                                <input class="payments" type="checkbox" value="ctrue"><img
-                                    src="images/icons/masterCard.png">
-                            </label>
+                            <input id="payments1" class="payments" type="checkbox" value="cfalse" onclick="check9()">
+                            <label for="payments1"> <img id="p1" src="images/icons/cash.png"></label>
+                            <input id="payments2" class="payments" type="checkbox" value="ctrue" onclick="check10()">
+                            <label for="payments2"> <img id="p2" src="images/icons/visaCard.png"></label>
+                            <input id="payments3" class="payments" type="checkbox" value="ctrue" onclick="check11()">
+                            <label for="payments3"> <img id="p3" src="images/icons/masterCard.png"></label>
                         </div>
                     </div>
                 </div>
@@ -781,7 +777,7 @@ MODAL TRIGGERS
         }
 
         map.setCenter({lat: 50.774289, lng: 6.085889});
-        map.setZoom(16);
+        map.setZoom(15);
     }
 
     function toggleBounce() {
@@ -929,33 +925,32 @@ MODAL TRIGGERS
 
         var location = [results.geometry.location.lat, results.geometry.location.lng];
 
-  /*      var contentString =
-            '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' + results.rating +
-            '"><strong style="font-size: 20px; margin-right: 13px">' + results.name +
-            '</strong><br><i>' + results.filters.cuisine + '</i><hr></div>' +
-            results.address +
-            '<br><br><img src="' + results.icon + '" style="max-width:250px">' +
-            '<br><br>Average Cost: <b>' + results.avgCost +
-            '</b>' + results.cardsAccepted +
-            '<br><br>' + results.isVegan +
-            'People typically spend <b>' + results.filters.avg_time_spent +
-            '</b> here<br><br>' + results.reservationRequired +
-            '<br><br><button class="btn btn-danger" value="' + location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
-*/
+        /*      var contentString =
+         '<div><div style="padding-top:8px"><img style="max-height:15px; float: right ; margin-top: 5px" src="' + results.rating +
+         '"><strong style="font-size: 20px; margin-right: 13px">' + results.name +
+         '</strong><br><i>' + results.filters.cuisine + '</i><hr></div>' +
+         results.address +
+         '<br><br><img src="' + results.icon + '" style="max-width:250px">' +
+         '<br><br>Average Cost: <b>' + results.avgCost +
+         '</b>' + results.cardsAccepted +
+         '<br><br>' + results.isVegan +
+         'People typically spend <b>' + results.filters.avg_time_spent +
+         '</b> here<br><br>' + results.reservationRequired +
+         '<br><br><button class="btn btn-danger" value="' + location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
+         */
 
-  var contentString= '<div class="card" style="max-width: 320px"><div class="card-image">' +
-            '<img id="resImage" src="'+results.icon+'">' +
-            '<span class="card-title" id="resName">'+results.name+'</span></div>' +
+        var contentString = '<div class="card" style="max-width: 320px"><div class="card-image">' +
+            '<img id="resImage" src="' + results.icon + '">' +
+            '<span class="card-title" id="resName">' + results.name + '</span></div>' +
             '<div class="card-content">' +
-           ' <img id="resRating" style="max-height: 18px;  margin: 5px" src="'+results.rating+'">' +
-           ' <div id="resInfo">' +
-           ' <p id="resAddress" style="margin-top: 6px">'+results.address+'</p>' +
-           ' <h6>Average Cost: <strong><p id="resAvgCost" style="display: inline-block">'+results.avgCost+'</p></strong></h6>' +
-            '<h6>Payments: <strong><p id="resCard" style="display: inline-block">'+results.cardsAccepted+'</p></strong></h6>' +
-            '<h6>People typically spend: <strong><p id="resSpendTime" style="display: inline-block">'+results.filters.avg_time_spent+'</p></strong></h6>' +
-            '<h6>Must Try: <strong><p id="mustTry" style="display: inline-block">'+results.filters.must_try+'</p></strong></h6><br>' +
-            '<button class="btn waves-effect waves-light orange white-text pulse" value="'+location+'" id="navigation" onclick="showdirection()" style="width: 100%">Show Directions </button></div></div></div>'
-
+            ' <img id="resRating" style="max-height: 18px;  margin: 5px" src="' + results.rating + '">' +
+            ' <div id="resInfo">' +
+            ' <p id="resAddress" style="margin-top: 6px">' + results.address + '</p>' +
+            ' <h6>Average Cost: <strong><p id="resAvgCost" style="display: inline-block">' + results.avgCost + '</p></strong></h6>' +
+            '<h6>Payments: <strong><p id="resCard" style="display: inline-block">' + results.cardsAccepted + '</p></strong></h6>' +
+            '<h6>People typically spend: <strong><p id="resSpendTime" style="display: inline-block">' + results.filters.avg_time_spent + '</p></strong></h6>' +
+            '<h6>Must Try: <strong><p id="mustTry" style="display: inline-block">' + results.filters.must_try + '</p></strong></h6><br>' +
+            '<button class="btn waves-effect waves-light orange white-text pulse" value="' + location + '" id="navigation" onclick="showdirection()" style="width: 100%">Show Directions </button></div></div></div>'
 
 
         /*
@@ -1097,6 +1092,179 @@ MODAL TRIGGERS
         }
     }
 
+    function check1() {
+
+        if (document.getElementById('cuisine1').checked === true) {
+
+            document.getElementById('c1').style.border = '3px solid #ff8800';
+            document.getElementById('c1').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('c1').style.border = '0px';
+            document.getElementById('c1').style.borderRadius = '0px';
+        }
+
+    }
+    function check2() {
+
+        if (document.getElementById('cuisine2').checked === true) {
+
+            document.getElementById('c2').style.border = '3px solid #ff8800';
+            document.getElementById('c2').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('c2').style.border = '0px';
+            document.getElementById('c2').style.borderRadius = '0px';
+        }
+
+    }
+    function check3() {
+
+        if (document.getElementById('cuisine3').checked === true) {
+
+            document.getElementById('c3').style.border = '3px solid #ff8800';
+            document.getElementById('c3').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('c3').style.border = '0px';
+            document.getElementById('c3').style.borderRadius = '0px';
+        }
+
+    }
+    function check4() {
+
+        if (document.getElementById('cuisine4').checked === true) {
+
+            document.getElementById('c4').style.border = '3px solid #ff8800';
+            document.getElementById('c4').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('c4').style.border = '0px';
+            document.getElementById('c4').style.borderRadius = '0px';
+        }
+
+    }
+    function check5() {
+
+        if (document.getElementById('cuisine5').checked === true) {
+
+            document.getElementById('c5').style.border = '3px solid #ff8800';
+            document.getElementById('c5').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('c5').style.border = '0px';
+            document.getElementById('c5').style.borderRadius = '0px';
+        }
+
+    }
+    function check6() {
+
+        if (document.getElementById('cuisine6').checked === true) {
+
+            document.getElementById('c6').style.border = '3px solid #ff8800';
+            document.getElementById('c6').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('c6').style.border = '0px';
+            document.getElementById('c6').style.borderRadius = '0px';
+        }
+
+    }
+    function check7() {
+
+        if (document.getElementById('cuisine7').checked === true) {
+
+            document.getElementById('c7').style.border = '3px solid #ff8800';
+            document.getElementById('c7').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('c7').style.border = '0px';
+            document.getElementById('c7').style.borderRadius = '0px';
+        }
+
+    }
+    function check8() {
+
+        if (document.getElementById('cuisine8').checked === true) {
+
+            document.getElementById('c8').style.border = '3px solid #ff8800';
+            document.getElementById('c8').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('c8').style.border = '0px';
+            document.getElementById('c8').style.borderRadius = '0px';
+        }
+
+    }
+
+    function check9() {
+
+        if (document.getElementById('payments1').checked === true) {
+
+            document.getElementById('p1').style.border = '3px solid #ff8800';
+            document.getElementById('p1').style.borderRadius = '10px';
+
+        } else {
+
+            document.getElementById('p1').style.border = '0px';
+            document.getElementById('p1').style.borderRadius = '0px';
+        }
+
+    }
+    function check10() {
+
+        if (document.getElementById('payments2').checked === true) {
+
+            document.getElementById('p2').style.border = '3px solid #ff8800';
+            document.getElementById('p2').style.borderRadius = '10px';
+
+        } else {
+
+            document.getElementById('p2').style.border = '0px';
+            document.getElementById('p2').style.borderRadius = '0px';
+        }
+
+    }
+
+    function check11() {
+
+        if (document.getElementById('payments3').checked === true) {
+
+            document.getElementById('p3').style.border = '3px solid #ff8800';
+            document.getElementById('p3').style.borderRadius = '10px';
+
+        } else {
+
+            document.getElementById('p3').style.border = '0px';
+            document.getElementById('p3').style.borderRadius = '0px';
+        }
+
+    }
+
+    function check12() {
+
+        if (document.getElementById('vegan1').checked === true) {
+
+            document.getElementById('v1').style.border = '3px solid #ff8800';
+            document.getElementById('v1').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('v1').style.border = '0px';
+            document.getElementById('v1').style.borderRadius = '0px';
+        }
+
+    }
+
+
 
 </script>
 
@@ -1114,7 +1282,6 @@ MODAL TRIGGERS
 </script>
 </body>
 </html>
-
 
 
 
