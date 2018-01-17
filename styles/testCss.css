@@ -81,8 +81,13 @@ html, body {
     font-size: 16px;
 }
 
-#cuisine img, #payment img {
+#cuisine img{
     margin: 0px 10px 55px 0px;
+}
+
+#payment img {
+    margin: 0px 10px 40px 0px;
+    max-width: 80px;
 }
 
 #available h5{
