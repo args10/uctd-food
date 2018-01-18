@@ -77,21 +77,38 @@ html, body {
     font-size: 12px;
 }
 
+#right-panel .row {
+    margin-bottom: 0;
+}
+
 .cost, .payments, .cuisine, .vegan, .reservation{
     font-size: 16px;
 }
 
+#vegan, #gluten, #lactose{
+    display: inline-block;
+}
+
 #cuisine img{
-    margin: 0px 0px 80px 0px;
+    margin: 0px 0px 0px 0px;
     max-width: 75px;
 }
+
+#vegan img{
+    margin: 0px 0px 0px 8px;
+    max-width: 75px;
+}
+
+#vegan label span{
+    padding: 5px;
+}
+
 #cuisine img:hover, #cost a:hover, #payments img:hover, #vegan img:hover, #reservation img:hover {
     opacity: 0.5;
-
 }
 
 #payment img {
-    margin: 0px 10px 40px 0px;
+    margin: 0px 0px 0px 0px;
     max-width: 75px;
 }
 
@@ -116,10 +133,17 @@ html, body {
     display: none;
 }
 
+[type="checkbox"]+label {
+    padding-left: 25px !important;
+}
+
 .checkbox label{
     height: 45px;
 }
 
+.checkbox label span{
+    padding: 10px;
+}
  
 /* END checkbox*/
 

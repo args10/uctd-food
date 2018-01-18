@@ -128,16 +128,22 @@ MODAL TRIGGERS
                             <input id="ch1" class="cost" type="checkbox" value="less">
                             <label for="ch1">
                                 <a class="waves-effect waves-light btn orange white-text">&#8364;</a>
+                                <br>
+                                <span>0 - 10 &#8364;</span>
                             </label>
 
                             <input id="ch2" class="cost" type="checkbox" value="medium">
                             <label for="ch2">
                                 <a class="waves-effect waves-light btn orange white-text">&#8364;&#8364;</a>
+                                <br>
+                                <span>11 - 40 &#8364;</span>
                             </label>
 
                             <input id="ch3" class="cost" type="checkbox" value="high">
                             <label for="ch3">
                                 <a class="waves-effect waves-light btn orange white-text">&#8364;&#8364;&#8364;</a>
+                                <br>
+                                <span>41 - 60 &#8364;</span>
                             </label>
                         </div>
                     </div>
@@ -156,10 +162,27 @@ MODAL TRIGGERS
                         <div class="progress">
                             <div class="determinate orange" style="width:100%"></div>
                         </div>
-                        <h5>Vegan</h5>
+                        <h5>Ingredients:</h5>
                         <div id="vegan" class="checkbox" onclick="filterCount()">
                             <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
-                            <label for="vegan1"><img id="v1" src="images/icons/vegan.jpg" height="64px" width="64px"></label>
+                            <label for="vegan1"><img id="v1" src="images/icons/vegan.jpg" height="64px" width="64px">
+                            <br>
+                            <span>Vegan</span>
+                            </label>
+                        </div>
+                       <div id="vegan" class="checkbox" onclick="filterCount()">
+                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
+                            <label for="vegan1"><img id="v1" src="images/icons/gluten.jpg" height="64px" width="64px">
+                            <br>
+                            <span>Gluten-free</span>
+                            </label>
+                        </div>
+                        <div id="vegan" class="checkbox" onclick="filterCount()">
+                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
+                            <label for="vegan1"><img id="v1" src="images/icons/lactose.jpg" height="64px" width="64px">
+                             <br>
+                            <span>Lactose-free</span>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -177,32 +200,56 @@ MODAL TRIGGERS
                         <div class="progress">
                             <div class="determinate orange" style="width:100%"></div>
                         </div>
-                        <h5>Cuisine</h5>
+                        <h5>Most searched:</h5>
                         <div id="cuisine" class="checkbox" onclick="filterCount()">
 
                             <input id="cuisine1" class="cuisine" type="checkbox" value="Asian" onclick="check1()">
-                            <label for="cuisine1"><img id="c1" src="images/icons/fnoodles.png"></label>
+                            <label for="cuisine1"><img id="c1" src="images/icons/fnoodles.png">
+                                <br>
+                                <span>Noodles</span>
+                            </label>
 
                             <input id="cuisine2" class="cuisine" type="checkbox" value="Italian" onclick="check2()">
-                            <label for="cuisine2"><img id="c2" src="images/icons/fpizza.png"> </label>
+                            <label for="cuisine2"><img id="c2" src="images/icons/fpizza.png">
+                                <br>
+                                <span>Pizza</span>
+                             </label>
 
                             <input id="cuisine3" class="cuisine" type="checkbox" value="Lebanese" onclick="check3()">
-                            <label for="cuisine3"><img id="c3" src="images/icons/fkebab.png"> </label>
+                            <label for="cuisine3"><img id="c3" src="images/icons/fkebab.png">
+                                <br>
+                                <span>Kebab</span>
+                             </label>
 
                             <input id="cuisine4" class="cuisine" type="checkbox" value="Cafe" onclick="check4()">
-                            <label for="cuisine4"><img id="c4" src="images/icons/fCoffee.png"></label>
+                            <label for="cuisine4"><img id="c4" src="images/icons/fCoffee.png">
+                                <br>
+                                <span>Coffee</span>
+                            </label>
 
                             <input id="cuisine5" class="cuisine" type="checkbox" value="Spanish" onclick="check5()">
-                            <label for="cuisine5"><img id="c5" src="images/icons/fseefood.png"></label>
+                            <label for="cuisine5"><img id="c5" src="images/icons/fseefood.png">
+                                <br>
+                                <span>Seafood</span>
+                            </label>
 
                             <input id="cuisine6" class="cuisine" type="checkbox" value="American" onclick="check6()">
-                            <label for="cuisine6"><img id="c6" src="images/icons/fchicken.png"></label>
+                            <label for="cuisine6"><img id="c6" src="images/icons/fchicken.png">
+                                <br>
+                                <span>Chicken</span>
+                            </label>
 
                             <input id="cuisine7" class="cuisine" type="checkbox" value="German" onclick="check7()">
-                            <label for="cuisine7"><img id="c7" src="images/icons/fhamburger.png"> </label>
+                            <label for="cuisine7"><img id="c7" src="images/icons/fhamburger.png">
+                                <br>
+                                <span>Burger</span>
+                            </label>
 
                             <input id="cuisine8" class="cuisine" type="checkbox" value="French" onclick="check8()">
-                            <label for="cuisine8"><img id="c8" src="images/icons/fmuffin.png"></label>
+                            <label for="cuisine8"><img id="c8" src="images/icons/fmuffin.png">
+                                <br>
+                                <span>Donuts</span>
+                            </label>
 
                         </div>
                     </div>
@@ -221,14 +268,25 @@ MODAL TRIGGERS
                         <div class="progress">
                             <div class="determinate orange" style="width:100%"></div>
                         </div>
-                        <h5>Payment</h5>
+                        <h5>Payment:</h5>
                         <div id="payments" class="checkbox" onclick="filterCount()">
                             <input id="payments1" class="payments" type="checkbox" value="cfalse" onclick="check9()">
-                            <label for="payments1"> <img id="p1" src="images/icons/cash.png"></label>
+                            <label for="payments1"> <img id="p1" src="images/icons/cash.png">
+                                <br>
+                                <span>Cash</span>
+                            </label>
+
                             <input id="payments2" class="payments" type="checkbox" value="ctrue" onclick="check10()">
-                            <label for="payments2"> <img id="p2" src="images/icons/visaCard.png"></label>
+                            <label for="payments2"> <img id="p2" src="images/icons/visaCard.png">
+                                <br>
+                                <span>Visa</span>
+                            </label>
+
                             <input id="payments3" class="payments" type="checkbox" value="ctrue" onclick="check11()">
-                            <label for="payments3"> <img id="p3" src="images/icons/masterCard.png"></label>
+                            <label for="payments3"> <img id="p3" src="images/icons/masterCard.png">
+                                <br>
+                                <span>Mastercard</span>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -239,18 +297,20 @@ MODAL TRIGGERS
                                         <div class="determinate orange" style="width:40%"></div>
                                     </div>
                                 </label> -->
-                <div class="col-sm-12">
+<!--                 <div class="col-sm-12">
                     <div class="progress">
                         <div class="determinate orange" style="width:100%"></div>
                     </div>
-                    <h5>Reservation</h5>
+                    <h5>Reservation:</h5>
                     <div id="reservation" class="checkbox" onclick="filterCount()">
                         <label>
                             <input class="reservation" type="checkbox" value="rtrue">
-                            <h5>Required</h5>
+                            <label for="vegan1"><img id="v1" src="images/icons/reservationsrequirednew.png" height="64px" width="64px">
+                            <br>
+                            <span>reservationsrequirednew</span>
                         </label>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!--             <div class="form-group">
                             <div class="row">
