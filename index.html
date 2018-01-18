@@ -22,98 +22,103 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
 </head>
-<body>
-<!-- Modal
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <br><br>
-            <div class="alert alert-info" >
-              <h4 class="modal-title" id="myModalLabel">Simply touch any of the icons for more details about the restaurant</h4>
-            </div>
-      </div>
+<div>
+    <!-- Modal
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <br><br>
+                <div class="alert alert-info" >
+                  <h4 class="modal-title" id="myModalLabel">Simply touch any of the icons for more details about the restaurant</h4>
+                </div>
+          </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Get started</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END Modal -->
-
-<!--
-
-MODAL TRIGGERS
-    <a href="#modal1" class="btn waves-effect">Modal 1</a>
-    <a href="#modal2" class="btn waves-effect red">Modal 2</a>
-
-    <!-- MODAL STRUCTURE
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
-      </div>
-      <div class="modal-footer">
-        <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
-      </div>
-    </div>
-
-    <div id="modal2" class="modal">
-      <div class="modal-content">
-        <h4>Modal 2 Header</h4>
-        <p>A bunch of text</p>
-      </div>
-      <div class="modal-footer">
-        <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
-      </div>
-    </div>
-    -->
-
-<div id="floating-panel"></div>
-<!--<div id="infoWindow">
-    <div class="card">
-        <div class="card-image">
-            <img id="resImage" src="">
-            <span class="card-title" id="resName">Card Title</span>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Get started</button>
+          </div>
         </div>
-        <div class="card-content">
-            <img id="resRating" style="max-height: 18px;  margin: 5px">
-            <div id="resInfo">
-                <p id="resAddress" style="margin-top: 6px"></p>
-                <h6>Average Cost: <strong><p id="resAvgCost" style="display: inline-block"></p></strong></h6>
-                <h6>Payments: <strong><p id="resCard" style="display: inline-block"></p></strong></h6>
-                <h6>People typically spend: <strong><p id="resSpendTime" style="display: inline-block"></p></strong>
-                </h6>
-                <h6>Must Try: <strong><p id="mustTry" style="display: inline-block"></p></strong></h6>
-                <br>
-                <button class="btn waves-effect waves-light orange white-text pulse" id="navigation"
-                        onclick="showdirection()" style="width: 100%">Show Directions
-                </button>
-            </div>
+      </div>
+    </div>
+    <!-- END Modal -->
+
+    <!--
+
+    MODAL TRIGGERS
+        <a href="#modal1" class="btn waves-effect">Modal 1</a>
+        <a href="#modal2" class="btn waves-effect red">Modal 2</a>
+
+        <!-- MODAL STRUCTURE
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
+          </div>
         </div>
 
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <h4>Modal 2 Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="" class="modal-action modal-close waves-effect waves-green">Button</a>
+          </div>
+        </div>
+        -->
+
+    <div id="floating-panel"></div>
+    <div>
+        <button id="goback" class="btn btn-large orange white-text" style="display: none"
+                onclick="window.location.href='index.html'">Back
+        </button>
+    </div>
+    <!--<div id="infoWindow">
+        <div class="card">
+            <div class="card-image">
+                <img id="resImage" src="">
+                <span class="card-title" id="resName">Card Title</span>
+            </div>
+            <div class="card-content">
+                <img id="resRating" style="max-height: 18px;  margin: 5px">
+                <div id="resInfo">
+                    <p id="resAddress" style="margin-top: 6px"></p>
+                    <h6>Average Cost: <strong><p id="resAvgCost" style="display: inline-block"></p></strong></h6>
+                    <h6>Payments: <strong><p id="resCard" style="display: inline-block"></p></strong></h6>
+                    <h6>People typically spend: <strong><p id="resSpendTime" style="display: inline-block"></p></strong>
+                    </h6>
+                    <h6>Must Try: <strong><p id="mustTry" style="display: inline-block"></p></strong></h6>
+                    <br>
+                    <button class="btn waves-effect waves-light orange white-text pulse" id="navigation"
+                            onclick="showdirection()" style="width: 100%">Show Directions
+                    </button>
+                </div>
+            </div>
+
+        </div>-->
+
+
+    <!--     <img id="resImage" src=""><hr>
+        <div id="resInfo">
+            <h6 id="resName" style="display: inline-block; font-size: 18px"></h6>
+            <p id="resAddress" style="margin-top: 6px"></p>
+            <strong>Average Cost: </strong><p id="resAvgCost" style="display: inline-block"></p><br>
+            <strong>Payments: </strong><p id="resCard" style="display: inline-block"></p><br>
+            <strong>People typically spend: </strong><p id="resSpendTime" style="display: inline-block"></p><br>
+            <strong>Menu: </strong><p id="resMenu" style="display: inline-block"></p><br>
+            <button class="btn btn-danger pulse" id="navigation" onclick="showdirection()" style="width: 100%">ShowNavigation</button>
+        </div>
     </div>-->
-
-
-<!--     <img id="resImage" src=""><hr>
-    <div id="resInfo">
-        <h6 id="resName" style="display: inline-block; font-size: 18px"></h6>
-        <p id="resAddress" style="margin-top: 6px"></p>
-        <strong>Average Cost: </strong><p id="resAvgCost" style="display: inline-block"></p><br>
-        <strong>Payments: </strong><p id="resCard" style="display: inline-block"></p><br>
-        <strong>People typically spend: </strong><p id="resSpendTime" style="display: inline-block"></p><br>
-        <strong>Menu: </strong><p id="resMenu" style="display: inline-block"></p><br>
-        <button class="btn btn-danger pulse" id="navigation" onclick="showdirection()" style="width: 100%">ShowNavigation</button>
-    </div>
-</div>-->
 </div>
 <div id="right-panel">
     <div id="filter" onchange="filter()">
         <form class="form-horizontal">
             <h3 class="orange darken-2">20 restaurants found near you</h3>
-            
+
 
             <div class="form-group">
                 <!--                 <div class="row">
@@ -125,7 +130,7 @@ MODAL TRIGGERS
                                 </div> -->
                 <div class="row">
                     <div class="col-sm-12">
-                        
+
                         <h5>Most searched:</h5>
                         <div id="cuisine" class="checkbox" onclick="filterCount()">
 
@@ -139,13 +144,13 @@ MODAL TRIGGERS
                             <label for="cuisine2"><img id="c2" src="images/icons/fpizza.png">
                                 <br>
                                 <span>Pizza</span>
-                             </label>
+                            </label>
 
                             <input id="cuisine3" class="cuisine" type="checkbox" value="Lebanese" onclick="check3()">
                             <label for="cuisine3"><img id="c3" src="images/icons/fkebab.png">
                                 <br>
                                 <span>Kebab</span>
-                             </label>
+                            </label>
 
                             <input id="cuisine4" class="cuisine" type="checkbox" value="Cafe" onclick="check4()">
                             <label for="cuisine4"><img id="c4" src="images/icons/fCoffee.png">
@@ -198,22 +203,18 @@ MODAL TRIGGERS
                         <div id="vegan" class="checkbox" onclick="filterCount()">
                             <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
                             <label for="vegan1"><img id="v1" src="images/icons/vegan.jpg" height="64px" width="64px">
-                            <br>
-                            <span>Vegan</span>
+                                <br>
+                                <span>  Vegan</span>
                             </label>
-                        </div>
-                       <div id="vegan" class="checkbox" onclick="filterCount()">
-                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
-                            <label for="vegan1"><img id="v1" src="images/icons/gluten.jpg" height="64px" width="64px">
-                            <br>
-                            <span>Gluten-free</span>
+                            <input id="vegan2" class="vegan" type="checkbox" value="vtrue" onclick="check13()">
+                            <label for="vegan2"><img id="v2" src="images/icons/gluten.jpg" height="64px" width="64px">
+                                <br>
+                                <span>Gluten-free</span>
                             </label>
-                        </div>
-                        <div id="vegan" class="checkbox" onclick="filterCount()">
-                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
-                            <label for="vegan1"><img id="v1" src="images/icons/lactose.jpg" height="64px" width="64px">
-                             <br>
-                            <span>Lactose-free</span>
+                            <input id="vegan3" class="vegan" type="checkbox" value="vtrue" onclick="check14()">
+                            <label for="vegan3"><img id="v3" src="images/icons/lactose.jpg" height="64px" width="64px">
+                                <br>
+                                <span>Lactose-free</span>
                             </label>
                         </div>
                     </div>
@@ -234,7 +235,7 @@ MODAL TRIGGERS
                         </div>
                         <h5> Average Cost: </h5>
                         <div id="cost" class="checkbox" onclick="filterCount()">
-                            <input id="ch1" class="cost" type="checkbox" value="less" >
+                            <input id="ch1" class="cost" type="checkbox" value="less">
                             <label for="ch1">
                                 <a class="btn orange white-text">&#8364;</a>
                                 <br>
@@ -301,20 +302,20 @@ MODAL TRIGGERS
                                         <div class="determinate orange" style="width:40%"></div>
                                     </div>
                                 </label> -->
-<!--                 <div class="col-sm-12">
-                    <div class="progress">
-                        <div class="determinate orange" style="width:100%"></div>
-                    </div>
-                    <h5>Reservation:</h5>
-                    <div id="reservation" class="checkbox" onclick="filterCount()">
-                        <label>
-                            <input class="reservation" type="checkbox" value="rtrue">
-                            <label for="vegan1"><img id="v1" src="images/icons/reservationsrequirednew.png" height="64px" width="64px">
-                            <br>
-                            <span>reservationsrequirednew</span>
-                        </label>
-                    </div>
-                </div> -->
+                <!--                 <div class="col-sm-12">
+                                    <div class="progress">
+                                        <div class="determinate orange" style="width:100%"></div>
+                                    </div>
+                                    <h5>Reservation:</h5>
+                                    <div id="reservation" class="checkbox" onclick="filterCount()">
+                                        <label>
+                                            <input class="reservation" type="checkbox" value="rtrue">
+                                            <label for="vegan1"><img id="v1" src="images/icons/reservationsrequirednew.png" height="64px" width="64px">
+                                            <br>
+                                            <span>reservationsrequirednew</span>
+                                        </label>
+                                    </div>
+                                </div> -->
             </div>
             <!--             <div class="form-group">
                             <div class="row">
@@ -348,13 +349,13 @@ MODAL TRIGGERS
     </div>
 
 
-<!--     <div id="selectMode" style="display: none">
-        <button class="btn btn-default mybtn" id="walking" value="WALKING"><img src="images/walking.png"></button>
-        <button class="btn btn-default mybtn" id="bicycling" value="BICYCLING"><img src="images/bycicle.png">
-        </button>
-        <button class="btn btn-default mybtn" id="transit" value="TRANSIT"><img src="images/bus.png"></button>
-        <button class="btn btn-default mybtn" id="driving" value="DRIVING"><img src="images/car.png"></button>
-    </div> -->
+    <!--     <div id="selectMode" style="display: none">
+            <button class="btn btn-default mybtn" id="walking" value="WALKING"><img src="images/walking.png"></button>
+            <button class="btn btn-default mybtn" id="bicycling" value="BICYCLING"><img src="images/bycicle.png">
+            </button>
+            <button class="btn btn-default mybtn" id="transit" value="TRANSIT"><img src="images/bus.png"></button>
+            <button class="btn btn-default mybtn" id="driving" value="DRIVING"><img src="images/car.png"></button>
+        </div> -->
 
     <div id="selectMode" style="display: none">
         <div class="trans-mode-wrapper">
@@ -363,9 +364,9 @@ MODAL TRIGGERS
             </button>
             <span>walking</span>
         </div>
-       <!--  <button class="btn orange white-text" id="bicycling" value="BICYCLING">
-            <i class="material-icons left">directions_bike</i>
-        </button>  -->
+        <!--  <button class="btn orange white-text" id="bicycling" value="BICYCLING">
+             <i class="material-icons left">directions_bike</i>
+         </button>  -->
         <div class="trans-mode-wrapper">
             <button class="btn orange white-text mybtn" id="transit" value="TRANSIT">
                 <i class="material-icons">directions_bus</i>
@@ -1041,7 +1042,7 @@ MODAL TRIGGERS
          */
 
         var contentString = '<div id="infowin" style="overflow: hidden !important;"><div class="card" style="max-width: 320px"><div class="card-image">' +
-            
+
             '<img id="resImage" src="' + results.icon + '">' +
             '<span class="card-title" id="resName">' + results.name + '</span></div>' +
 
@@ -1107,10 +1108,10 @@ MODAL TRIGGERS
             calculateAndDisplayRoute(directionsService, directionsDisplay, destination);
         });
 
-/*        document.getElementById('bicycling').addEventListener('click', function () {
-            selectedMode = this.value;
-            calculateAndDisplayRoute(directionsService, directionsDisplay, destination);
-        });*/
+        /*        document.getElementById('bicycling').addEventListener('click', function () {
+         selectedMode = this.value;
+         calculateAndDisplayRoute(directionsService, directionsDisplay, destination);
+         });*/
 
         document.getElementById('driving').addEventListener('click', function () {
             selectedMode = this.value;
@@ -1127,6 +1128,9 @@ MODAL TRIGGERS
     function calculateAndDisplayRoute(directionsService, directionsDisplay, destination) {
 
         infowindow.close();
+
+        document.getElementById('goback').style.display = 'block';
+
 
         var latitude = parseFloat(destination.split(',')[0].substring(0));
         var longitude = parseFloat(destination.split(',')[1].substring(0, 15));
@@ -1170,6 +1174,9 @@ MODAL TRIGGERS
             printBtn.onclick = function () {
 
 
+                printBtn.style.display ='none';
+
+
                 var thankInfo = document.createElement("div");
                 var thankInfoI = document.createElement("img");
 
@@ -1180,8 +1187,14 @@ MODAL TRIGGERS
                 var goBackBtn = document.createElement("button");
                 var goBackT = document.createTextNode("Go Back");
 
-                goBackBtn.className = 'btn btn-primary';
-                goBackBtn.style.marginTop = '-90px';
+                goBackBtn.className = 'btn btn-large waves-effect waves-light orange white-text pulse';
+                goBackBtn.style.marginTop = '-200px';
+                goBackBtn.style.marginLeft = '350px';
+                goBackBtn.onclick = function () {
+
+                    window.location.href = "welcome.html";
+
+                };
 
 
                 goBackBtn.appendChild(goBackT);
@@ -1368,6 +1381,32 @@ MODAL TRIGGERS
         }
 
     }
+    function check13() {
+        if (document.getElementById('vegan2').checked === true) {
+
+            document.getElementById('v2').style.border = '3px solid #ff8800';
+            document.getElementById('v2').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('v2').style.border = '0px';
+            document.getElementById('v2').style.borderRadius = '0px';
+        }
+
+    }
+    function check14() {
+        if (document.getElementById('vegan3').checked === true) {
+
+            document.getElementById('v3').style.border = '3px solid #ff8800';
+            document.getElementById('v3').style.borderRadius = '45px';
+
+        } else {
+
+            document.getElementById('v3').style.border = '0px';
+            document.getElementById('v3').style.borderRadius = '0px';
+        }
+
+    }
 
 </script>
 
@@ -1379,29 +1418,36 @@ MODAL TRIGGERS
 
 <script>
     $(document).ready(function () {
-        $( "#cost a").on( "click", function() {
-            var className="darken-4";
+        $("#cost a").on("click", function () {
+            var className = "darken-4";
 
-             if ($( this ).hasClass(className)){
-                $( this ).removeClass(className);
-             }
-             else
-             $( this ).addClass(className);
+            if ($(this).hasClass(className)) {
+                $(this).removeClass(className);
+            }
+            else
+                $(this).addClass(className);
         });
 
-        $( "#selectMode .mybtn").on( "click", function() {
-            var className="darken-4";
+        $("#selectMode.mybtn").on("click", function () {
+            var className = "darken-4";
 
-             if ($( this ).hasClass(className)){
-                $( this ).removeClass(className);
-             }
-             else
-             $( this ).addClass(className);
+            if ($(this).hasClass(className)) {
+                $(this).removeClass(className);
+            }
+            else
+                $(this).addClass(className);
         });
     });
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 
