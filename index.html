@@ -939,7 +939,7 @@ MODAL TRIGGERS
          '<br><br><button class="btn btn-danger" value="' + location + '" id="navigation" onclick="showdirection()">Show Navigation</button></div>';
          */
 
-        var contentString = '<div class="card" style="max-width: 320px"><div class="card-image">' +
+        var contentString = '<div id="infowin" style="overflow: hidden !important;"><div class="card" style="max-width: 320px"><div class="card-image">' +
             '<img id="resImage" src="' + results.icon + '">' +
             '<span class="card-title" id="resName">' + results.name + '</span></div>' +
             '<div class="card-content">' +
@@ -950,7 +950,7 @@ MODAL TRIGGERS
             '<h6>Payments: <strong><p id="resCard" style="display: inline-block">' + results.cardsAccepted + '</p></strong></h6>' +
             '<h6>People typically spend: <strong><p id="resSpendTime" style="display: inline-block">' + results.filters.avg_time_spent + '</p></strong></h6>' +
             '<h6>Must Try: <strong><p id="mustTry" style="display: inline-block">' + results.filters.must_try + '</p></strong></h6><br>' +
-            '<button class="btn waves-effect waves-light orange white-text pulse" value="' + location + '" id="navigation" onclick="showdirection()" style="width: 100%">Show Directions </button></div></div></div>'
+            '<button class="btn waves-effect waves-light orange white-text pulse" value="' + location + '" id="navigation" onclick="showdirection()" style="width: 100%">Show Directions </button></div></div></div></div>'
 
 
         /*
