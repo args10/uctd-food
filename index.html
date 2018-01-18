@@ -357,18 +357,29 @@ MODAL TRIGGERS
     </div> -->
 
     <div id="selectMode" style="display: none">
-        <button class="btn orange white-text mybtn" id="walking" value="WALKING">
-            <i class="material-icons">directions_walk</i>
-        </button>
+        <div class="trans-mode-wrapper">
+            <button class="btn orange white-text mybtn" id="walking" value="WALKING">
+                <i class="material-icons">directions_walk</i>
+            </button>
+            <span>walking</span>
+        </div>
        <!--  <button class="btn orange white-text" id="bicycling" value="BICYCLING">
             <i class="material-icons left">directions_bike</i>
         </button>  -->
-        <button class="btn orange white-text mybtn" id="transit" value="TRANSIT">
-            <i class="material-icons">directions_bus</i>
-        </button>
-        <button class="btn orange white-text mybtn" id="driving" value="DRIVING">
-            <i class="material-icons">directions_car</i>
-        </button>
+        <div class="trans-mode-wrapper">
+            <button class="btn orange white-text mybtn" id="transit" value="TRANSIT">
+                <i class="material-icons">directions_bus</i>
+            </button>
+            <br>
+            <span>By bus</span>
+        </div>
+        <div class="trans-mode-wrapper">
+            <button class="btn orange white-text mybtn" id="driving" value="DRIVING">
+                <i class="material-icons">directions_car</i>
+            </button>
+            <br>
+            <span>By Car</span>
+        </div>
     </div>
     <div id="bottom-panel"></div>
 </div>
