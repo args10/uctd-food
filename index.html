@@ -1379,7 +1379,17 @@ MODAL TRIGGERS
 
 <script>
     $(document).ready(function () {
-        $( "#cost").on( "click", "a", function() {
+        $( "#cost a").on( "click", function() {
+            var className="darken-4";
+
+             if ($( this ).hasClass(className)){
+                $( this ).removeClass(className);
+             }
+             else
+             $( this ).addClass(className);
+        });
+
+        $( "#selectMode .mybtn").on( "click", function() {
             var className="darken-4";
 
              if ($( this ).hasClass(className)){
