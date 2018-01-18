@@ -113,80 +113,8 @@ MODAL TRIGGERS
     <div id="filter" onchange="filter()">
         <form class="form-horizontal">
             <h3 class="orange darken-2">20 restaurants found near you</h3>
-            <div class="form-group">
-                <!--                 <div class="row">
-                                    <label for="cost" class="col-sm-12 "><h5> Average Cost: </h5>
-                                        <div class="progress">
-                                            <div class="determinate orange" style="width:100%"></div>
-                                        </div>
-                                    </label>
-                                </div> -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h5> Average Cost: </h5>
-                        <div id="cost" class="checkbox" onclick="filterCount()">
-                            <input id="ch1" class="cost" type="checkbox" value="less" >
-                            <label for="ch1">
-                                <a class="btn orange white-text">&#8364;</a>
-                                <br>
-                                <span>0 - 10 &#8364;</span>
-                            </label>
+            
 
-                            <input id="ch2" class="cost" type="checkbox" value="medium">
-                            <label for="ch2">
-                                <a class="btn orange white-text">&#8364;&#8364;</a>
-                                <br>
-                                <span>11 - 40 &#8364;</span>
-                            </label>
-
-                            <input id="ch3" class="cost" type="checkbox" value="high">
-                            <label for="ch3">
-                                <a class="btn orange white-text">&#8364;&#8364;&#8364;</a>
-                                <br>
-                                <span>41 - 60 &#8364;</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <!--                 <div class="row">
-                                    <label for="vegan" class="col-sm-12"><h5>Vegan</h5>
-                                        <div class="progress">
-                                            <div class="determinate orange" style="width:40%"></div>
-                                        </div>
-                                    </label>
-                                </div> -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="progress">
-                            <div class="determinate orange" style="width:100%"></div>
-                        </div>
-                        <h5>Ingredients:</h5>
-                        <div id="vegan" class="checkbox" onclick="filterCount()">
-                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
-                            <label for="vegan1"><img id="v1" src="images/icons/vegan.jpg" height="64px" width="64px">
-                            <br>
-                            <span>Vegan</span>
-                            </label>
-                        </div>
-                       <div id="vegan" class="checkbox" onclick="filterCount()">
-                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
-                            <label for="vegan1"><img id="v1" src="images/icons/gluten.jpg" height="64px" width="64px">
-                            <br>
-                            <span>Gluten-free</span>
-                            </label>
-                        </div>
-                        <div id="vegan" class="checkbox" onclick="filterCount()">
-                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
-                            <label for="vegan1"><img id="v1" src="images/icons/lactose.jpg" height="64px" width="64px">
-                             <br>
-                            <span>Lactose-free</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="form-group">
                 <!--                 <div class="row">
                                     <label for="cuisine" class="col-sm-12 "><h5>Cuisine</h5>
@@ -197,9 +125,7 @@ MODAL TRIGGERS
                                 </div> -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="progress">
-                            <div class="determinate orange" style="width:100%"></div>
-                        </div>
+                        
                         <h5>Most searched:</h5>
                         <div id="cuisine" class="checkbox" onclick="filterCount()">
 
@@ -255,6 +181,84 @@ MODAL TRIGGERS
                     </div>
                 </div>
             </div>
+            <div class="form-group">
+                <!--                 <div class="row">
+                                    <label for="vegan" class="col-sm-12"><h5>Vegan</h5>
+                                        <div class="progress">
+                                            <div class="determinate orange" style="width:40%"></div>
+                                        </div>
+                                    </label>
+                                </div> -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="progress">
+                            <div class="determinate orange" style="width:100%"></div>
+                        </div>
+                        <h5>Ingredients:</h5>
+                        <div id="vegan" class="checkbox" onclick="filterCount()">
+                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
+                            <label for="vegan1"><img id="v1" src="images/icons/vegan.jpg" height="64px" width="64px">
+                            <br>
+                            <span>Vegan</span>
+                            </label>
+                        </div>
+                       <div id="vegan" class="checkbox" onclick="filterCount()">
+                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
+                            <label for="vegan1"><img id="v1" src="images/icons/gluten.jpg" height="64px" width="64px">
+                            <br>
+                            <span>Gluten-free</span>
+                            </label>
+                        </div>
+                        <div id="vegan" class="checkbox" onclick="filterCount()">
+                            <input id="vegan1" class="vegan" type="checkbox" value="vtrue" onclick="check12()">
+                            <label for="vegan1"><img id="v1" src="images/icons/lactose.jpg" height="64px" width="64px">
+                             <br>
+                            <span>Lactose-free</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <!--                 <div class="row">
+                                    <label for="cost" class="col-sm-12 "><h5> Average Cost: </h5>
+                                        <div class="progress">
+                                            <div class="determinate orange" style="width:100%"></div>
+                                        </div>
+                                    </label>
+                                </div> -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="progress">
+                            <div class="determinate orange" style="width:100%"></div>
+                        </div>
+                        <h5> Average Cost: </h5>
+                        <div id="cost" class="checkbox" onclick="filterCount()">
+                            <input id="ch1" class="cost" type="checkbox" value="less" >
+                            <label for="ch1">
+                                <a class="btn orange white-text">&#8364;</a>
+                                <br>
+                                <span>0 - 10 &#8364;</span>
+                            </label>
+
+                            <input id="ch2" class="cost" type="checkbox" value="medium">
+                            <label for="ch2">
+                                <a class="btn orange white-text">&#8364;&#8364;</a>
+                                <br>
+                                <span>11 - 40 &#8364;</span>
+                            </label>
+
+                            <input id="ch3" class="cost" type="checkbox" value="high">
+                            <label for="ch3">
+                                <a class="btn orange white-text">&#8364;&#8364;&#8364;</a>
+                                <br>
+                                <span>41 - 60 &#8364;</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="form-group" id="payment">
                 <!-- <div class="row">
                     <label for="payments" class="col-sm-12"><h5>Cards accepted</h5>
@@ -344,12 +348,27 @@ MODAL TRIGGERS
     </div>
 
 
-    <div id="selectMode" style="display: none">
+<!--     <div id="selectMode" style="display: none">
         <button class="btn btn-default mybtn" id="walking" value="WALKING"><img src="images/walking.png"></button>
         <button class="btn btn-default mybtn" id="bicycling" value="BICYCLING"><img src="images/bycicle.png">
         </button>
         <button class="btn btn-default mybtn" id="transit" value="TRANSIT"><img src="images/bus.png"></button>
         <button class="btn btn-default mybtn" id="driving" value="DRIVING"><img src="images/car.png"></button>
+    </div> -->
+
+    <div id="selectMode" style="display: none">
+        <button class="btn orange white-text mybtn" id="walking" value="WALKING">
+            <i class="material-icons">directions_walk</i>
+        </button>
+       <!--  <button class="btn orange white-text" id="bicycling" value="BICYCLING">
+            <i class="material-icons left">directions_bike</i>
+        </button>  -->
+        <button class="btn orange white-text mybtn" id="transit" value="TRANSIT">
+            <i class="material-icons">directions_bus</i>
+        </button>
+        <button class="btn orange white-text mybtn" id="driving" value="DRIVING">
+            <i class="material-icons">directions_car</i>
+        </button>
     </div>
     <div id="bottom-panel"></div>
 </div>
@@ -1025,7 +1044,7 @@ MODAL TRIGGERS
             '<h6>Must Try: <strong><p id="mustTry" style="display: inline-block">' + results.filters.must_try + '</p></strong></h6><br>' +
             '<h6><strong><p id="closingSoon" style="display: inline-block">' + results.closingSoon + '</p></strong></h6>' +
             '<h6><strong><p id="seatsAvailable" style="display: inline-block">' + results.seatsAvailable + '</p></strong></h6><br>' +
-            
+
             '<button class="btn waves-effect waves-light orange white-text pulse" value="' + location + '" id="navigation" onclick="showdirection()" style="width: 100%">Show Directions </button></div></div></div></div>'
 
 
@@ -1077,10 +1096,10 @@ MODAL TRIGGERS
             calculateAndDisplayRoute(directionsService, directionsDisplay, destination);
         });
 
-        document.getElementById('bicycling').addEventListener('click', function () {
+/*        document.getElementById('bicycling').addEventListener('click', function () {
             selectedMode = this.value;
             calculateAndDisplayRoute(directionsService, directionsDisplay, destination);
-        });
+        });*/
 
         document.getElementById('driving').addEventListener('click', function () {
             selectedMode = this.value;
@@ -1134,7 +1153,7 @@ MODAL TRIGGERS
             var printT = document.createTextNode(" Print");
 
             printBtn.style.fontSize = '20px';
-            printBtn.className = 'btn btn-success';
+            printBtn.className = 'btn btn-large waves-effect waves-light orange white-text pulse';
 
             printBtn.appendChild(printT);
             printBtn.onclick = function () {

@@ -10,11 +10,10 @@ html, body {
     font-size:30px;
 }
 .mybtn{
-    background-color: transparent;
-    border: transparent;
-    width: 24%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: 47px !important;
+    margin: 12px;
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
 }
 .mybtn:hover{
     background-color: #e8e8e8;
@@ -35,7 +34,7 @@ html, body {
 #bottom-panel {
     position: absolute;
     bottom: 20px;
-    left: 83%;
+    right:120px;
 }
 
 #right-panel {
@@ -163,3 +162,17 @@ html, body {
 
 /* END InfoWindow*/
 
+
+
+/* Start Directions */
+
+.adp-warnbox, .adp-legal{
+    display: none;
+}
+
+
+#selectMode i{
+    font-size: 35px;
+}
+
+/* End Directions */
