@@ -125,23 +125,23 @@ MODAL TRIGGERS
                     <div class="col-sm-12">
                         <h5> Average Cost: </h5>
                         <div id="cost" class="checkbox" onclick="filterCount()">
-                            <input id="ch1" class="cost" type="checkbox" value="less">
+                            <input id="ch1" class="cost" type="checkbox" value="less" >
                             <label for="ch1">
-                                <a class="waves-effect waves-light btn orange white-text">&#8364;</a>
+                                <a class="btn orange white-text">&#8364;</a>
                                 <br>
                                 <span>0 - 10 &#8364;</span>
                             </label>
 
                             <input id="ch2" class="cost" type="checkbox" value="medium">
                             <label for="ch2">
-                                <a class="waves-effect waves-light btn orange white-text">&#8364;&#8364;</a>
+                                <a class="btn orange white-text">&#8364;&#8364;</a>
                                 <br>
                                 <span>11 - 40 &#8364;</span>
                             </label>
 
                             <input id="ch3" class="cost" type="checkbox" value="high">
                             <label for="ch3">
-                                <a class="waves-effect waves-light btn orange white-text">&#8364;&#8364;&#8364;</a>
+                                <a class="btn orange white-text">&#8364;&#8364;&#8364;</a>
                                 <br>
                                 <span>41 - 60 &#8364;</span>
                             </label>
@@ -1310,7 +1310,6 @@ MODAL TRIGGERS
     }
 
     function check12() {
-
         if (document.getElementById('vegan1').checked === true) {
 
             document.getElementById('v1').style.border = '3px solid #ff8800';
@@ -1324,8 +1323,6 @@ MODAL TRIGGERS
 
     }
 
-
-
 </script>
 
 <!--Import jQuery before materialize.js-->
@@ -1336,8 +1333,15 @@ MODAL TRIGGERS
 
 <script>
     $(document).ready(function () {
-        // Init Modal
-        //$('.modal').modal();
+        $( "#cost").on( "click", "a", function() {
+            var className="darken-4";
+
+             if ($( this ).hasClass(className)){
+                $( this ).removeClass(className);
+             }
+             else
+             $( this ).addClass(className);
+        });
     });
 </script>
 </body>

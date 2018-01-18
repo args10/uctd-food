@@ -103,7 +103,7 @@ html, body {
     padding: 5px;
 }
 
-#cuisine img:hover, #cost a:hover, #payments img:hover, #vegan img:hover, #reservation img:hover {
+#cuisine img:hover,  #payments img:hover, #vegan img:hover, #reservation img:hover {
     opacity: 0.5;
 }
 
@@ -162,3 +162,4 @@ html, body {
  
 
 /* END InfoWindow*/
+
