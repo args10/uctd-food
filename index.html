@@ -983,6 +983,17 @@ MODAL TRIGGERS
         else
             results.reservationRequired = '<b>Reservation not required</b>';
 
+        if (results.filters.closing_soon === "true")
+            results.closingSoon = '<b style="color: red"><span class="glyphicon glyphicon-exclamation-sign"></span> Closing Soon </b>';
+        else
+            results.closingSoon = '<b style="color: green"><span class="glyphicon glyphicon-ok"></span> Open Now </b>';
+
+        if (results.filters.seats_available === "true")
+            results.seatsAvailable = '<b style="color: green"><span class="glyphicon glyphicon-ok"></span> Seats available </b>';
+        else
+            results.seatsAvailable = '<b style="color: red"><span class="glyphicon glyphicon-exclamation-sign"></span> Fully booked</b>';
+
+
         var location = [results.geometry.location.lat, results.geometry.location.lng];
 
         /*      var contentString =
@@ -1010,6 +1021,8 @@ MODAL TRIGGERS
             '<h6>Payments: <strong><p id="resCard" style="display: inline-block">' + results.cardsAccepted + '</p></strong></h6>' +
             '<h6>People typically spend: <strong><p id="resSpendTime" style="display: inline-block">' + results.filters.avg_time_spent + '</p></strong></h6>' +
             '<h6>Must Try: <strong><p id="mustTry" style="display: inline-block">' + results.filters.must_try + '</p></strong></h6><br>' +
+            '<h6><strong><p id="closingSoon" style="display: inline-block">' + results.closingSoon + '</p></strong></h6>' +
+            '<h6><strong><p id="seatsAvailable" style="display: inline-block">' + results.seatsAvailable + '</p></strong></h6><br>' +
             '<button class="btn waves-effect waves-light orange white-text pulse" value="' + location + '" id="navigation" onclick="showdirection()" style="width: 100%">Show Directions </button></div></div></div></div>'
 
 

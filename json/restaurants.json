@@ -23,7 +23,9 @@
         "cards_accepted": "cfalse",
         "reservation_required": "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "true"
       }
     },
     {
@@ -47,7 +49,9 @@
         "cards_accepted": "ctrue",
         "reservation_required": "rtrue",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "true",
+        "seats_available" : "true"
       }
     },
     {
@@ -71,7 +75,9 @@
         "cards_accepted": "cfalse",
         "reservation_required": "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "true"
       }
     },
     {
@@ -95,7 +101,9 @@
         "cards_accepted": "cfalse",
         "reservation_required": "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "true",
+        "seats_available" : "true"
           
       }
     },
@@ -120,7 +128,9 @@
         "cards_accepted": "ctrue",
         "reservation_required": "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "false"
       }
     },
     {
@@ -144,7 +154,9 @@
         "cards_accepted": "ctrue",
         "reservation_required": "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "true"
       }
     },
     {
@@ -168,7 +180,9 @@
         "cards_accepted": "cfalse",
         "reservation_required": "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "true",
+        "seats_available" : "true"
       }
     },
     {
@@ -192,7 +206,9 @@
         "cards_accepted": "ctrue",
         "reservation_required": "rtrue",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "false"
       }
     },
     {
@@ -216,7 +232,9 @@
         "cards_accepted" : "ctrue",
         "reservation_required" : "rtrue",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "true",
+        "seats_available" : "true"
       }
     },
     {
@@ -240,7 +258,9 @@
       "cards_accepted" : "ctrue",
       "reservation_required" : "rtrue",
       "avg_time_spent" : "1 to 2 hours",
-      "must_try" : "Pizza, Pasta"
+      "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "true"
     }
     },
     {
@@ -264,7 +284,9 @@
         "cards_accepted" : "ctrue",
         "reservation_required" : "rtrue",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "false"
       }
     },
     {
@@ -288,7 +310,9 @@
         "cards_accepted" : "ctrue",
         "reservation_required" : "rtrue",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "true",
+        "seats_available" : "true"
       }
     },
     {
@@ -312,7 +336,9 @@
         "cards_accepted" : "ctrue",
         "reservation_required" : "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "true"
       }
     },
     {
@@ -336,7 +362,9 @@
         "cards_accepted" : "ctrue",
         "reservation_required" : "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "true",
+        "seats_available" : "false"
       }
     },
     {
@@ -360,7 +388,9 @@
         "cards_accepted" : "ctrue",
         "reservation_required" : "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "true"
       }
     },
     {
@@ -384,7 +414,9 @@
         "cards_accepted" : "ctrue",
         "reservation_required" : "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "true"
       }
     },
     {
@@ -408,7 +440,9 @@
         "cards_accepted" :"ctrue",
         "reservation_required" : "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "false"
       }
     },
     {
@@ -432,7 +466,9 @@
         "cards_accepted" : "cfalse",
         "reservation_required" : "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "true",
+        "seats_available" : "true"
       }
     },
     {
@@ -456,7 +492,9 @@
         "cards_accepted" : "cfalse",
         "reservation_required" : "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "true"
       }
     },
     {
@@ -480,7 +518,9 @@
         "cards_accepted" : "cfalse",
         "reservation_required" : "rfalse",
         "avg_time_spent" : "1 to 2 hours",
-        "must_try" : "Pizza, Pasta"
+        "must_try" : "Pizza, Pasta",
+        "closing_soon" : "false",
+        "seats_available" : "true"
       }
     }
   ],
