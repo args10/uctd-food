@@ -74,7 +74,7 @@
     <div id="floating-panel"></div>
     <div>
         <button id="goback" class="btn btn-large orange white-text" style="display: none"
-                onclick="window.location.href='index.html'">Back
+                onclick="goBack()">Back
         </button>
     </div>
     <!--<div id="infoWindow">
@@ -235,23 +235,23 @@
                         </div>
                         <h5> Average Cost: </h5>
                         <div id="cost" class="checkbox" onclick="filterCount()">
-                            <input id="ch1" class="cost" type="checkbox" value="less">
+                            <input id="ch1" class="cost" type="checkbox" value="less" onclick="check15()">
                             <label for="ch1">
-                                <a class="btn orange white-text">&#8364;</a>
+                                <a id ="co1" class="btn orange white-text">&#8364;</a>
                                 <br>
                                 <span>0 - 10 &#8364;</span>
                             </label>
 
-                            <input id="ch2" class="cost" type="checkbox" value="medium">
+                            <input id="ch2" class="cost" type="checkbox" value="medium" onclick="check16()">
                             <label for="ch2">
-                                <a class="btn orange white-text">&#8364;&#8364;</a>
+                                <a id ="co2" class="btn orange white-text">&#8364;&#8364;</a>
                                 <br>
                                 <span>11 - 40 &#8364;</span>
                             </label>
 
-                            <input id="ch3" class="cost" type="checkbox" value="high">
+                            <input id="ch3" class="cost" type="checkbox" value="high" onclick="check17()">
                             <label for="ch3">
-                                <a class="btn orange white-text">&#8364;&#8364;&#8364;</a>
+                                <a id ="co3" class="btn orange white-text">&#8364;&#8364;&#8364;</a>
                                 <br>
                                 <span>41 - 60 &#8364;</span>
                             </label>
@@ -407,6 +407,9 @@
     var selectedMode;
 
     var filterCountN = 0;
+
+    var filterPanel = document.getElementById('filter');
+    var select = document.getElementById('selectMode');
 
     //$('#myModal').modal();
 
@@ -879,6 +882,23 @@
         }
     }
 
+    function goBack() {
+
+
+        directionsDisplay.setMap(null);
+        directionsDisplay.setPanel(null);
+
+        filterPanel.style.display = 'block';
+        select.style.display = 'none';
+
+        document.getElementById('goback').style.display = 'none';
+        document.getElementById('print').style.display = 'none';
+
+        map.setCenter({lat: 50.774289, lng: 6.085889});
+        map.setZoom(15);
+
+
+    }
 
     function createMarker(place, mindex) {
 
@@ -1089,10 +1109,7 @@
 
         selectedMode = "WALKING";
 
-        var filter = document.getElementById('filter');
-        var select = document.getElementById('selectMode');
-
-        filter.style.display = 'none';
+        filterPanel.style.display = 'none';
         select.style.display = 'block';
 
         directionsDisplay.setMap(map);
@@ -1165,16 +1182,17 @@
         if (bottomPanel.childElementCount === 0) {
 
             var printBtn = document.createElement("button");
-            var printT = document.createTextNode(" Print");
+            var printT = document.createTextNode("Print");
 
             printBtn.style.fontSize = '20px';
             printBtn.className = 'btn btn-large waves-effect waves-light orange white-text pulse';
+            printBtn.id = 'print';
 
             printBtn.appendChild(printT);
             printBtn.onclick = function () {
 
 
-                printBtn.style.display ='none';
+                printBtn.style.display = 'none';
 
 
                 var thankInfo = document.createElement("div");
@@ -1184,22 +1202,27 @@
                 thankInfo.id = 'thankInfo';
                 thankInfo.appendChild(thankInfoI);
 
-                var goBackBtn = document.createElement("button");
-                var goBackT = document.createTextNode("Start Again");
+                setTimeout("window.location.href='welcome.html'",5000);
 
-                goBackBtn.className = 'btn btn-large waves-effect waves-light orange white-text pulse';
-                goBackBtn.style.marginTop = '-200px';
-                goBackBtn.style.marginLeft = '350px';
-                goBackBtn.onclick = function () {
+              //  setTimeout("alert('5 seconds!')",5000);
 
-                    window.location.href = "welcome.html";
+                /*     var goBackBtn = document.createElement("button");
+                     var goBackT = document.createTextNode("Start Again");
 
-                };
+                     goBackBtn.className = 'btn btn-large waves-effect waves-light orange white-text pulse';
+                     goBackBtn.style.marginTop = '-200px';
+                     goBackBtn.style.marginLeft = '350px';
+                     goBackBtn.onclick = function () {
+
+                         window.location.href = "welcome.html";
+
+                     };
 
 
-                goBackBtn.appendChild(goBackT);
-                thankInfo.appendChild(goBackBtn);
+                     goBackBtn.appendChild(goBackT);
+                     thankInfo.appendChild(goBackBtn);
 
+                 */
 
                 var element = document.getElementById("floating-panel");
                 element.appendChild(thankInfo);
@@ -1209,6 +1232,7 @@
             bottomPanel.appendChild(printBtn);
 
         }
+        document.getElementById('print').style.display = 'block';
     }
 
     function check1() {
@@ -1407,6 +1431,45 @@
         }
 
     }
+    function check15() {
+        if (document.getElementById('ch1').checked === true) {
+
+            document.getElementById('co1').style.border = '3px solid #ff6c00';
+            document.getElementById('co1').style.borderRadius = '5px';
+
+        } else {
+
+            document.getElementById('co1').style.border = '0px';
+            document.getElementById('co1').style.borderRadius = '0px';
+        }
+
+    }
+    function check16() {
+        if (document.getElementById('ch2').checked === true) {
+
+            document.getElementById('co2').style.border = '3px solid #ff6c00';
+            document.getElementById('co2').style.borderRadius = '5px';
+
+        } else {
+
+            document.getElementById('co2').style.border = '0px';
+            document.getElementById('co2').style.borderRadius = '0px';
+        }
+
+    }
+    function check17() {
+        if (document.getElementById('ch3').checked === true) {
+
+            document.getElementById('co3').style.border = '3px solid #ff6c00';
+            document.getElementById('co3').style.borderRadius = '5px';
+
+        } else {
+
+            document.getElementById('co3').style.border = '0px';
+            document.getElementById('co3').style.borderRadius = '0px';
+        }
+
+    }
 
 </script>
 
@@ -1418,7 +1481,7 @@
 
 <script>
     $(document).ready(function () {
-        $("#cost a").on("click", function () {
+     /*   $("#cost a").on("click", function () {
             var className = "darken-4";
 
             if ($(this).hasClass(className)) {
@@ -1426,7 +1489,7 @@
             }
             else
                 $(this).addClass(className);
-        });
+        });*/
 
         $("#selectMode.mybtn").on("click", function () {
             var className = "darken-4";
@@ -1441,6 +1504,36 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
