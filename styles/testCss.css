@@ -105,7 +105,7 @@ html, body {
     padding: 5px;
 }
 
-#cuisine img:hover, #payments img:hover, #vegan img:hover, #reservation img:hover {
+#cuisine img:hover, #cost img:hover, #payments img:hover, #vegan img:hover, #reservation img:hover {
     opacity: 0.5;
 }
 
@@ -144,7 +144,7 @@ html, body {
 }
 
 [type="checkbox"] + label {
-    padding-left: 25px !important;
+    padding-left: 22px !important;
 }
 
 .checkbox label {
