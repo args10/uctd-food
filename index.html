@@ -1029,11 +1029,11 @@
         }
 
         if (results.filters.average_cost === "less")
-            results.avgCost = "$ low";
+            results.avgCost = "<span style='color:limegreen;'>&#8364; Low</span>";
         if (results.filters.average_cost === "medium")
-            results.avgCost = "$$ medium";
+            results.avgCost = "<span style='color:gold;'>&#8364;&#8364; Medium</span>";
         else
-            results.avgCost = "$$$ high";
+            results.avgCost = "<span style='color:tomato;'>&#8364;&#8364;&#8364; High</span>";
 
         if (results.filters.is_vegan !== "vfalse")
             results.isVegan = '<b>Vegan</b> <img style="max-height:30px;"  src="images/vagan.jpg"><br><br>';
@@ -1051,14 +1051,14 @@
             results.reservationRequired = '<b>Reservation not required</b>';
 
         if (results.filters.closing_soon === "true")
-            results.closingSoon = '<b style="color: red"><span class="glyphicon glyphicon-exclamation-sign"></span> Closing Soon </b>';
+            results.closingSoon = '<b style="color: tomato"><span class="glyphicon glyphicon-exclamation-sign"></span> Closing Soon </b>';
         else
-            results.closingSoon = '<b style="color: green"><span class="glyphicon glyphicon-ok"></span> Open Now </b>';
+            results.closingSoon = '<b style="color: limegreen"><span class="glyphicon glyphicon-ok"></span> Open Now </b>';
 
         if (results.filters.seats_available === "true")
-            results.seatsAvailable = '<b style="color: green"><span class="glyphicon glyphicon-ok"></span> Seats available </b>';
+            results.seatsAvailable = '<b style="color: limegreen"><span class="glyphicon glyphicon-ok"></span> Seats available </b>';
         else
-            results.seatsAvailable = '<b style="color: red"><span class="glyphicon glyphicon-exclamation-sign"></span> Fully booked</b>';
+            results.seatsAvailable = '<b style="color: tomato"><span class="glyphicon glyphicon-exclamation-sign"></span> Fully booked</b>';
 
 
         var location = [results.geometry.location.lat, results.geometry.location.lng];
