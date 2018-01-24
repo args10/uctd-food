@@ -1046,9 +1046,9 @@
             results.cardsAccepted = 'Cash only';
 
         if (results.filters.reservation_required === "rtrue")
-            results.reservationRequired = '<b>Reservation required</b>';
+            results.reservationRequired = '<b style="color: tomato"><span class="glyphicon glyphicon-exclamation-sign"></span> Reservation required</b><br><br>';
         else
-            results.reservationRequired = '<b>Reservation not required</b>';
+            results.reservationRequired = '';
 
         if (results.filters.closing_soon === "true")
             results.closingSoon = '<b style="color: tomato"><span class="glyphicon glyphicon-exclamation-sign"></span> Closing Soon </b>';
@@ -1091,7 +1091,8 @@
             '<h6>People typically spend: <strong><p id="resSpendTime" style="display: inline-block">' + results.filters.avg_time_spent + '</p></strong></h6>' +
             '<h6>Must Try: <strong><p id="mustTry" style="display: inline-block">' + results.filters.must_try + '</p></strong></h6><br>' +
             '<h6><strong><p id="closingSoon" style="display: inline-block">' + results.closingSoon + '</p></strong></h6>' +
-            '<h6><strong><p id="seatsAvailable" style="display: inline-block">' + results.seatsAvailable + '</p></strong></h6><br>' +
+            '<h6><strong><p id="seatsAvailable" style="display: inline-block">' + results.seatsAvailable + '</p></strong></h6>' +
+            '<h6><strong><p id="seatsAvailable" style="display: inline-block">' + results.reservationRequired  + '</p></strong></h6>' +
 
             '<button class="btn waves-effect waves-light orange white-text pulse" value="' + location + '" id="navigation" onclick="showdirection()" style="width: 100%">Show Directions </button></div></div></div></div>'
 
