@@ -1215,11 +1215,11 @@
                 var thankInfo = document.createElement("div");
                 var thankInfoI = document.createElement("img");
 
-                thankInfoI.src = 'images/thankInfo.png';
+                thankInfoI.src = 'images/thanks.png';
                 thankInfo.id = 'thankInfo';
                 thankInfo.appendChild(thankInfoI);
 
-                setTimeout("window.location.href='welcome.html'",5000);
+                setTimeout("window.location.href='welcome.html'",6000);
 
               //  setTimeout("alert('5 seconds!')",5000);
 
@@ -1476,6 +1476,20 @@
     }
     function check17() {
         if (document.getElementById('ch3').checked === true) {
+
+            document.getElementById('co3').style.border = '3px solid #ff6c00';
+            document.getElementById('co3').style.borderRadius = '10px';
+
+        } else {
+
+            document.getElementById('co3').style.border = '0px';
+            document.getElementById('co3').style.borderRadius = '0px';
+        }
+
+    }
+
+    function check18() {
+        if (document.getElementById('walking').checked === true) {
 
             document.getElementById('co3').style.border = '3px solid #ff6c00';
             document.getElementById('co3').style.borderRadius = '10px';
